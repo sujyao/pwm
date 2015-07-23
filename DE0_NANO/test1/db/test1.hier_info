@@ -8,7 +8,7 @@ LED[1] <= select_mode:inst.led1
 
 
 |test1|select_mode:inst
-clk => pwm~reg0.CLK
+clk => pwms.CLK
 clk => counter[0].CLK
 clk => counter[1].CLK
 clk => counter[2].CLK
@@ -49,6 +49,6 @@ key0 => keys[1].DATAIN
 key1 => keys[0].DATAIN
 led0 <= ledr[0].DB_MAX_OUTPUT_PORT_TYPE
 led1 <= ledr[1].DB_MAX_OUTPUT_PORT_TYPE
-pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pwm <= pwms.DB_MAX_OUTPUT_PORT_TYPE
 
 
