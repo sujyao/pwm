@@ -1,10 +1,10 @@
 |test1
-GPIO_2[4] <= select_mode:inst.led0
-GPIO_2[5] <= select_mode:inst.led1
+GPIO_0[1] <= select_mode:inst.pwm
 CLOCK_50 => select_mode:inst.clk
 KEY[0] => select_mode:inst.key0
 KEY[1] => select_mode:inst.key1
-LED[4] <= select_mode:inst.pwm
+LED[0] <= select_mode:inst.led0
+LED[1] <= select_mode:inst.led1
 
 
 |test1|select_mode:inst
