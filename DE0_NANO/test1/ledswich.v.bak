@@ -1,0 +1,15 @@
+module ledswich(
+input wire key,
+output reg led
+	
+);
+
+always @(!key)
+begin
+if(!key)
+led = 1'b1;
+else
+led =1'b0;
+end
+
+endmodule

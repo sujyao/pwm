@@ -1,0 +1,9 @@
+module  select_mode(
+		input wire clk,key,
+		output reg pwm,led0,led1);
+		 
+		 
+		 
+	
+		
+endmodule 
