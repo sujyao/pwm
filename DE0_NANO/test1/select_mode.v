@@ -13,7 +13,7 @@ always @(posedge clk ) begin
 
 	if(keys == 2'b01) begin //50HZ
 		ledr <= 2'b01;
-		if(counter == 625) begin
+		if(counter == 500) begin
 			counter = 0;
 			pwms <= 1'b0; 
 		end

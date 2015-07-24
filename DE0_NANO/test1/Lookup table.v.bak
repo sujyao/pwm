@@ -1,0 +1,10 @@
+module sin(
+input  [10:0]x;
+output [7:0]sinx;
+);
+wire [8:0]x_quatur;
+wire [7:0]tableoutput;
+assign x[9]==1:x_quatur = 500-x[8:0]:x_quatur=x[8:0];
+
+assign x[10]==1:sinx = 128-tableoutput:sinx = tableoutput;
+
