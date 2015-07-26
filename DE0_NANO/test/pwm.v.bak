@@ -1,0 +1,31 @@
+module  pwm(
+		input clk,
+		output reg pwm);
+		 
+
+	integer counter;
+	
+always @(posedge clk)
+begin
+//pwm = !pwm;
+
+
+if(counter == 50) begin
+	counter = 0;
+	pwm = 1'b0; 
+	
+
+end
+else begin
+	counter = counter + 1;
+	pwm = pwm;
+end
+	
+if(counter >= 25)
+	pwm = 1'b1;
+else
+	pwm =1'b0;
+end
+
+	
+endmodule 

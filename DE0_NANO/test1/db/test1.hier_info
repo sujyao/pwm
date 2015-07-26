@@ -1,13 +1,4 @@
-|test1
-GPIO_0[1] <= select_mode:inst.pwm
-CLOCK_50 => select_mode:inst.clk
-KEY[0] => select_mode:inst.key0
-KEY[1] => select_mode:inst.key1
-LED[0] <= select_mode:inst.led0
-LED[1] <= select_mode:inst.led1
-
-
-|test1|select_mode:inst
+|select_mode
 clk => pwms.CLK
 clk => counter[0].CLK
 clk => counter[1].CLK
