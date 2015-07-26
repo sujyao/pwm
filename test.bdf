@@ -21,9 +21,9 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 328 208 496 224)
+	(rect 208 336 376 352)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLOCK_50" (rect 5 0 61 12)(font "Arial" ))
+	(text "CLOCK_50" (rect 5 0 60 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -34,10 +34,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 152 352 208 368))
 )
 (pin
 	(output)
-	(rect 624 208 800 224)
+	(rect 752 304 928 320)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text " GPIO_0[0]" (rect 90 0 145 12)(font "Arial" ))
 	(pt 0 8)
@@ -52,9 +53,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 496 184 624 264)
-	(text "pwm" (rect 5 0 27 12)(font "Arial" ))
-	(text "inst" (rect 8 64 25 76)(font "Arial" ))
+	(rect 496 312 656 424)
+	(text "spwm" (rect 5 0 33 12)(font "Arial" ))
+	(text "inst" (rect 8 96 25 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -63,13 +64,55 @@ applicable agreement for further details.
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port
-		(pt 128 32)
+		(pt 160 32)
 		(output)
-		(text "pwm" (rect 0 0 22 12)(font "Arial" ))
-		(text "pwm" (rect 89 27 111 39)(font "Arial" ))
-		(line (pt 128 32)(pt 112 32))
+		(text "p1" (rect 0 0 11 12)(font "Arial" ))
+		(text "p1" (rect 130 27 141 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(port
+		(pt 160 48)
+		(output)
+		(text "sine_a[8..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "sine_a[8..0]" (rect 91 43 148 55)(font "Arial" ))
+		(line (pt 160 48)(pt 144 48)(line_width 3))
+	)
+	(port
+		(pt 160 64)
+		(output)
+		(text "tri_out[9..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "tri_out[9..0]" (rect 92 59 148 71)(font "Arial" ))
+		(line (pt 160 64)(pt 144 64)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 112 64))
+		(rectangle (rect 16 16 144 96))
 	)
+)
+(connector
+	(pt 376 344)
+	(pt 384 344)
+)
+(connector
+	(pt 384 344)
+	(pt 384 208)
+)
+(connector
+	(pt 752 312)
+	(pt 688 312)
+)
+(connector
+	(pt 688 344)
+	(pt 688 312)
+)
+(connector
+	(pt 688 344)
+	(pt 656 344)
+)
+(connector
+	(pt 496 208)
+	(pt 384 208)
+)
+(connector
+	(pt 496 208)
+	(pt 496 344)
 )

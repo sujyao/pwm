@@ -10,17 +10,13 @@ reg [8:0] SINE_OUT;         //Output Sine in two's compliment
 
 always @ (THETA) begin                      //Combinatorial Logic Look Up Table
 
+	 THETA_HLP = 7'd64 - {1'd0, THETA[5:0]};
+	 THETA_TMP = THETA[6] ? THETA_HLP[5:0] : THETA[6];
+	 
     if (THETA[6:0] == 7'd64) begin          //At 90 degrees and 270 degrees
         SINE_TMP = 9'd255;
     end
     else begin
-        if (THETA[6]) begin                 //If counting down should begin reverse counting order
-            THETA_HLP = 7'd64 - {1'd0, THETA[5:0]};
-            THETA_TMP = {THETA_HLP[5:0]};
-        end
-        else begin                          //Continue counting up by default
-            THETA_TMP = {THETA[5:0]};
-        end
         case (THETA_TMP)                    //Look Up Table (quarter wave)
         6'd0: SINE_TMP = 9'd0;
         6'd1: SINE_TMP = 9'd6;

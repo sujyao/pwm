@@ -1,5 +1,5 @@
 Analysis & Synthesis report for test
-Sun Jul 26 15:01:52 2015
+Sun Jul 26 23:14:13 2015
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -14,8 +14,10 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Parameter Settings for Inferred Entity Instance: spwm:inst|lpm_divide:Mod0
+ 10. Parameter Settings for Inferred Entity Instance: spwm:inst|lpm_divide:Mod1
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -41,15 +43,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jul 26 15:01:52 2015      ;
+; Analysis & Synthesis Status        ; Successful - Sun Jul 26 23:14:13 2015      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; test                                       ;
 ; Top-level Entity Name              ; test                                       ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 61                                         ;
-;     Total combinational functions  ; 61                                         ;
-;     Dedicated logic registers      ; 33                                         ;
-; Total registers                    ; 33                                         ;
+; Total logic elements               ; 263                                        ;
+;     Total combinational functions  ; 263                                        ;
+;     Dedicated logic registers      ; 49                                         ;
+; Total registers                    ; 49                                         ;
 ; Total pins                         ; 2                                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -156,14 +158,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
-; pwm.v                            ; yes             ; User Verilog HDL File              ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/pwm.v ;         ;
-; ../../test.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/test.bdf            ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                              ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
+; ../../test.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/test.bdf                                 ;         ;
+; SINE_LUT.v                       ; yes             ; User Verilog HDL File              ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/SINE_LUT.v                 ;         ;
+; spwm.v                           ; yes             ; User Verilog HDL File              ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/spwm.v                     ;         ;
+; TRI_LUT.v                        ; yes             ; User Verilog HDL File              ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/TRI_LUT.v                  ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_divide.tdf                                                             ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/abs_divider.inc                                                            ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/sign_div_unsign.inc                                                        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                                                             ;         ;
+; db/lpm_divide_q9m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/db/lpm_divide_q9m.tdf      ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/db/sign_div_unsign_fkh.tdf ;         ;
+; db/alt_u_div_i4f.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/db/alt_u_div_i4f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/db/add_sub_8pc.tdf         ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -171,39 +184,49 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 61             ;
+; Estimated Total logic elements              ; 263            ;
 ;                                             ;                ;
-; Total combinational functions               ; 61             ;
+; Total combinational functions               ; 263            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 20             ;
-;     -- 3 input functions                    ; 0              ;
-;     -- <=2 input functions                  ; 41             ;
+;     -- 4 input functions                    ; 106            ;
+;     -- 3 input functions                    ; 48             ;
+;     -- <=2 input functions                  ; 109            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 30             ;
-;     -- arithmetic mode                      ; 31             ;
+;     -- normal mode                          ; 177            ;
+;     -- arithmetic mode                      ; 86             ;
 ;                                             ;                ;
-; Total registers                             ; 33             ;
-;     -- Dedicated logic registers            ; 33             ;
+; Total registers                             ; 49             ;
+;     -- Dedicated logic registers            ; 49             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 2              ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 33             ;
-; Total fan-out                               ; 230            ;
-; Average fan-out                             ; 2.35           ;
+; Maximum fan-out                             ; 49             ;
+; Total fan-out                               ; 886            ;
+; Average fan-out                             ; 2.80           ;
 +---------------------------------------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |test                      ; 61 (0)            ; 33 (0)       ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |test               ;              ;
-;    |pwm:inst|              ; 61 (61)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|pwm:inst      ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                    ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------+
+; |test                                     ; 263 (0)           ; 49 (0)       ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |test                                                                                                           ;              ;
+;    |spwm:inst|                            ; 263 (92)          ; 49 (49)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst                                                                                                 ;              ;
+;       |SINE_LUT:lut_a|                    ; 71 (71)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst|SINE_LUT:lut_a                                                                                  ;              ;
+;       |TRI_LUT:lut_tri|                   ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst|TRI_LUT:lut_tri                                                                                 ;              ;
+;       |lpm_divide:Mod0|                   ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst|lpm_divide:Mod0                                                                                 ;              ;
+;          |lpm_divide_q9m:auto_generated|  ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                   ;              ;
+;             |sign_div_unsign_fkh:divider| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ;              ;
+;                |alt_u_div_i4f:divider|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ;              ;
+;       |lpm_divide:Mod1|                   ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst|lpm_divide:Mod1                                                                                 ;              ;
+;          |lpm_divide_q9m:auto_generated|  ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated                                                   ;              ;
+;             |sign_div_unsign_fkh:divider| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ;              ;
+;                |alt_u_div_i4f:divider|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ;              ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -212,14 +235,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 33    ;
+; Total registers                              ; 49    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: spwm:inst|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------+
+; Parameter Name         ; Value          ; Type                             ;
++------------------------+----------------+----------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                          ;
+; LPM_WIDTHD             ; 8              ; Untyped                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                          ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                   ;
++------------------------+----------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: spwm:inst|lpm_divide:Mod1 ;
++------------------------+----------------+----------------------------------+
+; Parameter Name         ; Value          ; Type                             ;
++------------------------+----------------+----------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                          ;
+; LPM_WIDTHD             ; 8              ; Untyped                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                          ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                   ;
++------------------------+----------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -227,7 +296,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -237,7 +306,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Sun Jul 26 15:01:48 2015
+    Info: Processing started: Sun Jul 26 23:14:06 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file pwm.v
@@ -247,19 +316,50 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Warning (12019): Can't analyze file -- file SPIPLL.v is missing
 Warning (12019): Can't analyze file -- file DE0_NANO.v is missing
 Warning (12019): Can't analyze file -- file ADC_CTRL.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file sine_lut.v
+    Info (12023): Found entity 1: SINE_LUT
+Info (12021): Found 1 design units, including 1 entities, in source file spwm.v
+    Info (12023): Found entity 1: spwm
+Info (12021): Found 1 design units, including 1 entities, in source file tri_lut.v
+    Info (12023): Found entity 1: TRI_LUT
 Info (12127): Elaborating entity "test" for the top level hierarchy
-Info (12128): Elaborating entity "pwm" for hierarchy "pwm:inst"
+Info (12128): Elaborating entity "spwm" for hierarchy "spwm:inst"
+Warning (10036): Verilog HDL or VHDL warning at spwm.v(4): object "tick" assigned a value but never read
+Info (12128): Elaborating entity "SINE_LUT" for hierarchy "spwm:inst|SINE_LUT:lut_a"
+Info (12128): Elaborating entity "TRI_LUT" for hierarchy "spwm:inst|TRI_LUT:lut_tri"
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "spwm:inst|SINE_LUT:lut_a|Ram0" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "spwm:inst|TRI_LUT:lut_tri|Ram0" is uninferred due to inappropriate RAM size
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "spwm:inst|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "spwm:inst|Mod1"
+Info (12130): Elaborated megafunction instantiation "spwm:inst|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "spwm:inst|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_q9m.tdf
+    Info (12023): Found entity 1: lpm_divide_q9m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_fkh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_i4f.tdf
+    Info (12023): Found entity 1: alt_u_div_i4f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 89 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 265 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 87 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 446 megabytes
-    Info: Processing ended: Sun Jul 26 15:01:52 2015
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info (21061): Implemented 263 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 464 megabytes
+    Info: Processing ended: Sun Jul 26 23:14:13 2015
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
