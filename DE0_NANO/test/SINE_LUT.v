@@ -78,10 +78,10 @@ always @ (THETA) begin                      //Combinatorial Logic Look Up Table
         6'd57: SINE_TMP = 9'd251;
         6'd58: SINE_TMP = 9'd252;
         6'd59: SINE_TMP = 9'd253;
-        6'd60: SINE_TMP = 9'd254;
-        6'd61: SINE_TMP = 9'd254;
-        6'd62: SINE_TMP = 9'd255;
-        6'd63: SINE_TMP = 9'd255;
+        //6'd60: SINE_TMP = 9'd254;
+        //6'd61: SINE_TMP = 9'd254;
+        //6'd62: SINE_TMP = 9'd255;
+        //6'd63: SINE_TMP = 9'd255;
 
         endcase
     end

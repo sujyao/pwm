@@ -12,7 +12,7 @@ always @ (THETA) begin
 	 THETA_HLP = 7'd64 - {1'd0, THETA[5:0]};
 	 THETA_TMP = THETA[6] ? THETA_HLP[5:0] : THETA[6];
     if (THETA[6:0] == 7'd64) begin  
-        TRI_TMP = 10'd364;
+        TRI_TMP = 10'd255;
     end
     else begin
         case (THETA_TMP)            
@@ -80,6 +80,7 @@ always @ (THETA) begin
             6'd61: TRI_TMP = 10'd352;
             6'd62: TRI_TMP = 10'd358;
             6'd63: TRI_TMP = 10'd364;
+			
 
         endcase
     end

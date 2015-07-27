@@ -1,5 +1,5 @@
 Fitter report for test
-Sun Jul 26 23:14:30 2015
+Mon Jul 27 15:51:14 2015
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -67,17 +67,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Sun Jul 26 23:14:30 2015      ;
+; Fitter Status                      ; Successful - Mon Jul 27 15:51:13 2015      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; test                                       ;
 ; Top-level Entity Name              ; test                                       ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE22F17C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 263 / 22,320 ( 1 % )                       ;
-;     Total combinational functions  ; 263 / 22,320 ( 1 % )                       ;
-;     Dedicated logic registers      ; 49 / 22,320 ( < 1 % )                      ;
-; Total registers                    ; 49                                         ;
+; Total logic elements               ; 185 / 22,320 ( < 1 % )                     ;
+;     Total combinational functions  ; 185 / 22,320 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 72 / 22,320 ( < 1 % )                      ;
+; Total registers                    ; 72                                         ;
 ; Total pins                         ; 2 / 154 ( 1 % )                            ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                        ;
@@ -615,8 +615,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 318 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 318 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 263 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 263 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -639,7 +639,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 318     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 263     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 0       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -650,125 +650,125 @@ Parallel compilation was disabled, but you have multiple processors available. E
 The pin-out file can be found in C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/test.pin.
 
 
-+---------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                       ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Total logic elements                        ; 263 / 22,320 ( 1 % )  ;
-;     -- Combinational with no register       ; 214                   ;
-;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 49                    ;
-;                                             ;                       ;
-; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 106                   ;
-;     -- 3 input functions                    ; 48                    ;
-;     -- <=2 input functions                  ; 109                   ;
-;     -- Register only                        ; 0                     ;
-;                                             ;                       ;
-; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 177                   ;
-;     -- arithmetic mode                      ; 86                    ;
-;                                             ;                       ;
-; Total registers*                            ; 49 / 23,018 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 49 / 22,320 ( < 1 % ) ;
-;     -- I/O registers                        ; 0 / 698 ( 0 % )       ;
-;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 18 / 1,395 ( 1 % )    ;
-; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 2 / 154 ( 1 % )       ;
-;     -- Clock pins                           ; 1 / 7 ( 14 % )        ;
-;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )         ;
-;                                             ;                       ;
-; Global signals                              ; 1                     ;
-; M9Ks                                        ; 0 / 66 ( 0 % )        ;
-; Total block memory bits                     ; 0 / 608,256 ( 0 % )   ;
-; Total block memory implementation bits      ; 0 / 608,256 ( 0 % )   ;
-; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )       ;
-; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global clocks                               ; 1 / 20 ( 5 % )        ;
-; JTAGs                                       ; 0 / 1 ( 0 % )         ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
-; Impedance control blocks                    ; 0 / 4 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
-; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%          ;
-; Maximum fan-out                             ; 49                    ;
-; Highest non-global fan-out                  ; 26                    ;
-; Total fan-out                               ; 887                   ;
-; Average fan-out                             ; 2.80                  ;
-+---------------------------------------------+-----------------------+
++----------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                        ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Total logic elements                        ; 185 / 22,320 ( < 1 % ) ;
+;     -- Combinational with no register       ; 113                    ;
+;     -- Register only                        ; 0                      ;
+;     -- Combinational with a register        ; 72                     ;
+;                                             ;                        ;
+; Logic element usage by number of LUT inputs ;                        ;
+;     -- 4 input functions                    ; 65                     ;
+;     -- 3 input functions                    ; 23                     ;
+;     -- <=2 input functions                  ; 97                     ;
+;     -- Register only                        ; 0                      ;
+;                                             ;                        ;
+; Logic elements by mode                      ;                        ;
+;     -- normal mode                          ; 98                     ;
+;     -- arithmetic mode                      ; 87                     ;
+;                                             ;                        ;
+; Total registers*                            ; 72 / 23,018 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 72 / 22,320 ( < 1 % )  ;
+;     -- I/O registers                        ; 0 / 698 ( 0 % )        ;
+;                                             ;                        ;
+; Total LABs:  partially or completely used   ; 14 / 1,395 ( 1 % )     ;
+; Virtual pins                                ; 0                      ;
+; I/O pins                                    ; 2 / 154 ( 1 % )        ;
+;     -- Clock pins                           ; 1 / 7 ( 14 % )         ;
+;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )          ;
+;                                             ;                        ;
+; Global signals                              ; 1                      ;
+; M9Ks                                        ; 0 / 66 ( 0 % )         ;
+; Total block memory bits                     ; 0 / 608,256 ( 0 % )    ;
+; Total block memory implementation bits      ; 0 / 608,256 ( 0 % )    ;
+; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )        ;
+; PLLs                                        ; 0 / 4 ( 0 % )          ;
+; Global clocks                               ; 1 / 20 ( 5 % )         ;
+; JTAGs                                       ; 0 / 1 ( 0 % )          ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
+; Impedance control blocks                    ; 0 / 4 ( 0 % )          ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
+; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%           ;
+; Maximum fan-out                             ; 72                     ;
+; Highest non-global fan-out                  ; 20                     ;
+; Total fan-out                               ; 674                    ;
+; Average fan-out                             ; 2.57                   ;
++---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                         ;
-+---------------------------------------------+----------------------+--------------------------------+
-; Statistic                                   ; Top                  ; hard_block:auto_generated_inst ;
-+---------------------------------------------+----------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                  ; Low                            ;
-;                                             ;                      ;                                ;
-; Total logic elements                        ; 263 / 22320 ( 1 % )  ; 0 / 22320 ( 0 % )              ;
-;     -- Combinational with no register       ; 214                  ; 0                              ;
-;     -- Register only                        ; 0                    ; 0                              ;
-;     -- Combinational with a register        ; 49                   ; 0                              ;
-;                                             ;                      ;                                ;
-; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 106                  ; 0                              ;
-;     -- 3 input functions                    ; 48                   ; 0                              ;
-;     -- <=2 input functions                  ; 109                  ; 0                              ;
-;     -- Register only                        ; 0                    ; 0                              ;
-;                                             ;                      ;                                ;
-; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 177                  ; 0                              ;
-;     -- arithmetic mode                      ; 86                   ; 0                              ;
-;                                             ;                      ;                                ;
-; Total registers                             ; 49                   ; 0                              ;
-;     -- Dedicated logic registers            ; 49 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
-;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 18 / 1395 ( 1 % )    ; 0 / 1395 ( 0 % )               ;
-;                                             ;                      ;                                ;
-; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 2                    ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )      ; 0 / 132 ( 0 % )                ;
-; Total memory bits                           ; 0                    ; 0                              ;
-; Total RAM block bits                        ; 0                    ; 0                              ;
-; Clock control block                         ; 1 / 24 ( 4 % )       ; 0 / 24 ( 0 % )                 ;
-;                                             ;                      ;                                ;
-; Connections                                 ;                      ;                                ;
-;     -- Input Connections                    ; 0                    ; 0                              ;
-;     -- Registered Input Connections         ; 0                    ; 0                              ;
-;     -- Output Connections                   ; 0                    ; 0                              ;
-;     -- Registered Output Connections        ; 0                    ; 0                              ;
-;                                             ;                      ;                                ;
-; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 887                  ; 0                              ;
-;     -- Registered Connections               ; 178                  ; 0                              ;
-;                                             ;                      ;                                ;
-; External Connections                        ;                      ;                                ;
-;     -- Top                                  ; 0                    ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
-;                                             ;                      ;                                ;
-; Partition Interface                         ;                      ;                                ;
-;     -- Input Ports                          ; 1                    ; 0                              ;
-;     -- Output Ports                         ; 1                    ; 0                              ;
-;     -- Bidir Ports                          ; 0                    ; 0                              ;
-;                                             ;                      ;                                ;
-; Registered Ports                            ;                      ;                                ;
-;     -- Registered Input Ports               ; 0                    ; 0                              ;
-;     -- Registered Output Ports              ; 0                    ; 0                              ;
-;                                             ;                      ;                                ;
-; Port Connectivity                           ;                      ;                                ;
-;     -- Input Ports driven by GND            ; 0                    ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                    ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                    ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                    ; 0                              ;
-;     -- Input Ports with no Source           ; 0                    ; 0                              ;
-;     -- Output Ports with no Source          ; 0                    ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                    ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                    ; 0                              ;
-+---------------------------------------------+----------------------+--------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                          ;
++---------------------------------------------+-----------------------+--------------------------------+
+; Statistic                                   ; Top                   ; hard_block:auto_generated_inst ;
++---------------------------------------------+-----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                   ; Low                            ;
+;                                             ;                       ;                                ;
+; Total logic elements                        ; 185 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
+;     -- Combinational with no register       ; 113                   ; 0                              ;
+;     -- Register only                        ; 0                     ; 0                              ;
+;     -- Combinational with a register        ; 72                    ; 0                              ;
+;                                             ;                       ;                                ;
+; Logic element usage by number of LUT inputs ;                       ;                                ;
+;     -- 4 input functions                    ; 65                    ; 0                              ;
+;     -- 3 input functions                    ; 23                    ; 0                              ;
+;     -- <=2 input functions                  ; 97                    ; 0                              ;
+;     -- Register only                        ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Logic elements by mode                      ;                       ;                                ;
+;     -- normal mode                          ; 98                    ; 0                              ;
+;     -- arithmetic mode                      ; 87                    ; 0                              ;
+;                                             ;                       ;                                ;
+; Total registers                             ; 72                    ; 0                              ;
+;     -- Dedicated logic registers            ; 72 / 22320 ( < 1 % )  ; 0 / 22320 ( 0 % )              ;
+;                                             ;                       ;                                ;
+; Total LABs:  partially or completely used   ; 14 / 1395 ( 1 % )     ; 0 / 1395 ( 0 % )               ;
+;                                             ;                       ;                                ;
+; Virtual pins                                ; 0                     ; 0                              ;
+; I/O pins                                    ; 2                     ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )       ; 0 / 132 ( 0 % )                ;
+; Total memory bits                           ; 0                     ; 0                              ;
+; Total RAM block bits                        ; 0                     ; 0                              ;
+; Clock control block                         ; 1 / 24 ( 4 % )        ; 0 / 24 ( 0 % )                 ;
+;                                             ;                       ;                                ;
+; Connections                                 ;                       ;                                ;
+;     -- Input Connections                    ; 0                     ; 0                              ;
+;     -- Registered Input Connections         ; 0                     ; 0                              ;
+;     -- Output Connections                   ; 0                     ; 0                              ;
+;     -- Registered Output Connections        ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Internal Connections                        ;                       ;                                ;
+;     -- Total Connections                    ; 674                   ; 0                              ;
+;     -- Registered Connections               ; 159                   ; 0                              ;
+;                                             ;                       ;                                ;
+; External Connections                        ;                       ;                                ;
+;     -- Top                                  ; 0                     ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Partition Interface                         ;                       ;                                ;
+;     -- Input Ports                          ; 1                     ; 0                              ;
+;     -- Output Ports                         ; 1                     ; 0                              ;
+;     -- Bidir Ports                          ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Registered Ports                            ;                       ;                                ;
+;     -- Registered Input Ports               ; 0                     ; 0                              ;
+;     -- Registered Output Ports              ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Port Connectivity                           ;                       ;                                ;
+;     -- Input Ports driven by GND            ; 0                     ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                     ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                     ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                     ; 0                              ;
+;     -- Input Ports with no Source           ; 0                     ; 0                              ;
+;     -- Output Ports with no Source          ; 0                     ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                     ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                     ; 0                              ;
++---------------------------------------------+-----------------------+--------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -776,7 +776,7 @@ The pin-out file can be found in C:/Users/DELL/Documents/FPGA readings/Tools/DE0
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; CLOCK_50 ; R8    ; 3        ; 27           ; 0            ; 21           ; 49                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
+; CLOCK_50 ; R8    ; 3        ; 27           ; 0            ; 21           ; 72                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -1087,24 +1087,18 @@ The pin-out file can be found in C:/Users/DELL/Documents/FPGA readings/Tools/DE0
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                      ;
-+-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                             ; Library Name ;
-+-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------+--------------+
-; |test                                     ; 263 (0)     ; 49 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 2    ; 0            ; 214 (0)      ; 0 (0)             ; 49 (0)           ; |test                                                                                                           ;              ;
-;    |spwm:inst|                            ; 263 (108)   ; 49 (49)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 214 (59)     ; 0 (0)             ; 49 (33)          ; |test|spwm:inst                                                                                                 ;              ;
-;       |SINE_LUT:lut_a|                    ; 71 (71)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 71 (71)      ; 0 (0)             ; 0 (0)            ; |test|spwm:inst|SINE_LUT:lut_a                                                                                  ;              ;
-;       |TRI_LUT:lut_tri|                   ; 66 (66)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 63 (63)      ; 0 (0)             ; 3 (3)            ; |test|spwm:inst|TRI_LUT:lut_tri                                                                                 ;              ;
-;       |lpm_divide:Mod0|                   ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 8 (0)            ; |test|spwm:inst|lpm_divide:Mod0                                                                                 ;              ;
-;          |lpm_divide_q9m:auto_generated|  ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 8 (0)            ; |test|spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                   ;              ;
-;             |sign_div_unsign_fkh:divider| ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 8 (0)            ; |test|spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ;              ;
-;                |alt_u_div_i4f:divider|    ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 8 (8)            ; |test|spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ;              ;
-;       |lpm_divide:Mod1|                   ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 5 (0)            ; |test|spwm:inst|lpm_divide:Mod1                                                                                 ;              ;
-;          |lpm_divide_q9m:auto_generated|  ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 5 (0)            ; |test|spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated                                                   ;              ;
-;             |sign_div_unsign_fkh:divider| ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 5 (0)            ; |test|spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ;              ;
-;                |alt_u_div_i4f:divider|    ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 5 (5)            ; |test|spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ;              ;
-+-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                     ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                            ; Library Name ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; |test                                     ; 185 (0)     ; 72 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 2    ; 0            ; 113 (0)      ; 0 (0)             ; 72 (0)           ; |test                                                                                                          ;              ;
+;    |pwm:inst|                             ; 185 (173)   ; 72 (72)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 113 (101)    ; 0 (0)             ; 72 (67)          ; |test|pwm:inst                                                                                                 ;              ;
+;       |lpm_divide:Mod0|                   ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 5 (0)            ; |test|pwm:inst|lpm_divide:Mod0                                                                                 ;              ;
+;          |lpm_divide_q9m:auto_generated|  ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 5 (0)            ; |test|pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                   ;              ;
+;             |sign_div_unsign_fkh:divider| ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 5 (0)            ; |test|pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ;              ;
+;                |alt_u_div_i4f:divider|    ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 5 (5)            ; |test|pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ;              ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1127,14 +1121,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                  ;
-+---------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50            ; PIN_R8             ; 49      ; Clock        ; yes    ; Global Clock         ; GCLK18           ; --                        ;
-; spwm:inst|Equal0~10 ; LCCOMB_X48_Y22_N16 ; 15      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+---------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                 ;
++--------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name               ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50           ; PIN_R8             ; 72      ; Clock        ; yes    ; Global Clock         ; GCLK18           ; --                        ;
+; pwm:inst|Equal0~10 ; LCCOMB_X24_Y14_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
++--------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1142,410 +1136,352 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_R8   ; 49      ; 1                                    ; Global Clock         ; GCLK18           ; --                        ;
+; CLOCK_50 ; PIN_R8   ; 72      ; 2                                    ; Global Clock         ; GCLK18           ; --                        ;
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------------------+---------+
-; Name                                                                                                                     ; Fan-Out ;
-+--------------------------------------------------------------------------------------------------------------------------+---------+
-; spwm:inst|theta_a[0]                                                                                                     ; 26      ;
-; spwm:inst|SINE_LUT:lut_a|Add0~4                                                                                          ; 23      ;
-; spwm:inst|SINE_LUT:lut_a|Add0~10                                                                                         ; 20      ;
-; spwm:inst|SINE_LUT:lut_a|Add0~8                                                                                          ; 20      ;
-; spwm:inst|SINE_LUT:lut_a|Add0~2                                                                                          ; 18      ;
-; spwm:inst|theta_tri[6]                                                                                                   ; 16      ;
-; spwm:inst|theta_a[6]                                                                                                     ; 16      ;
-; spwm:inst|Equal0~10                                                                                                      ; 15      ;
-; spwm:inst|SINE_LUT:lut_a|Add0~6                                                                                          ; 15      ;
-; spwm:inst|theta_tri[0]                                                                                                   ; 13      ;
-; spwm:inst|TRI_LUT:lut_tri|THETA_TMP[5]~4                                                                                 ; 12      ;
-; spwm:inst|TRI_LUT:lut_tri|THETA_TMP[4]~1                                                                                 ; 12      ;
-; spwm:inst|TRI_LUT:lut_tri|THETA_TMP[3]~5                                                                                 ; 11      ;
-; spwm:inst|TRI_LUT:lut_tri|THETA_TMP[2]~2                                                                                 ; 10      ;
-; spwm:inst|TRI_LUT:lut_tri|Add0~2                                                                                         ; 10      ;
-; spwm:inst|TRI_LUT:lut_tri|Equal0~1                                                                                       ; 9       ;
-; spwm:inst|TRI_LUT:lut_tri|LessThan0~1                                                                                    ; 9       ;
-; spwm:inst|TRI_LUT:lut_tri|THETA_TMP[1]~3                                                                                 ; 8       ;
-; spwm:inst|TRI_LUT:lut_tri|THETA_TMP[0]~0                                                                                 ; 8       ;
-; spwm:inst|SINE_LUT:lut_a|LessThan0~1                                                                                     ; 8       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~16        ; 8       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~16        ; 8       ;
-; spwm:inst|SINE_LUT:lut_a|Equal0~1                                                                                        ; 7       ;
-; spwm:inst|TRI_LUT:lut_tri|Add0~8                                                                                         ; 6       ;
-; spwm:inst|TRI_LUT:lut_tri|Add0~4                                                                                         ; 6       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~22                                                                                        ; 5       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~20                                                                                        ; 5       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~18                                                                                        ; 5       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~17                                                                                         ; 5       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~15                                                                                         ; 5       ;
-; spwm:inst|TRI_LUT:lut_tri|Add0~6                                                                                         ; 5       ;
-; spwm:inst|theta_tri[1]                                                                                                   ; 4       ;
-; spwm:inst|theta_tri[7]                                                                                                   ; 4       ;
-; spwm:inst|theta_a[5]                                                                                                     ; 4       ;
-; spwm:inst|theta_a[4]                                                                                                     ; 4       ;
-; spwm:inst|theta_a[7]                                                                                                     ; 4       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~10                                                                                        ; 4       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~8                                                                                         ; 4       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~6                                                                                         ; 4       ;
-; spwm:inst|TRI_LUT:lut_tri|Add0~10                                                                                        ; 4       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~7                                                                                          ; 4       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~5                                                                                          ; 4       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~3                                                                                          ; 4       ;
-; spwm:inst|TRI_LUT:lut_tri|LessThan0~0                                                                                    ; 3       ;
-; spwm:inst|theta_tri[2]                                                                                                   ; 3       ;
-; spwm:inst|theta_tri[3]                                                                                                   ; 3       ;
-; spwm:inst|theta_tri[4]                                                                                                   ; 3       ;
-; spwm:inst|theta_tri[5]                                                                                                   ; 3       ;
-; spwm:inst|SINE_LUT:lut_a|LessThan0~0                                                                                     ; 3       ;
-; spwm:inst|theta_a[3]                                                                                                     ; 3       ;
-; spwm:inst|theta_a[2]                                                                                                     ; 3       ;
-; spwm:inst|theta_a[1]                                                                                                     ; 3       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~16                                                                                        ; 3       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~13                                                                                         ; 3       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~14                                                                                        ; 3       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~12                                                                                        ; 3       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~11                                                                                         ; 3       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~9                                                                                          ; 3       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~97                                                                                        ; 2       ;
-; spwm:inst|r[31]                                                                                                          ; 2       ;
-; spwm:inst|r[30]                                                                                                          ; 2       ;
-; spwm:inst|r[29]                                                                                                          ; 2       ;
-; spwm:inst|r[28]                                                                                                          ; 2       ;
-; spwm:inst|r[27]                                                                                                          ; 2       ;
-; spwm:inst|r[26]                                                                                                          ; 2       ;
-; spwm:inst|r[25]                                                                                                          ; 2       ;
-; spwm:inst|r[24]                                                                                                          ; 2       ;
-; spwm:inst|r[21]                                                                                                          ; 2       ;
-; spwm:inst|r[20]                                                                                                          ; 2       ;
-; spwm:inst|r[23]                                                                                                          ; 2       ;
-; spwm:inst|r[22]                                                                                                          ; 2       ;
-; spwm:inst|r[19]                                                                                                          ; 2       ;
-; spwm:inst|r[0]                                                                                                           ; 2       ;
-; spwm:inst|r[1]                                                                                                           ; 2       ;
-; spwm:inst|r[18]                                                                                                          ; 2       ;
-; spwm:inst|r[2]                                                                                                           ; 2       ;
-; spwm:inst|r[3]                                                                                                           ; 2       ;
-; spwm:inst|r[4]                                                                                                           ; 2       ;
-; spwm:inst|r[5]                                                                                                           ; 2       ;
-; spwm:inst|r[6]                                                                                                           ; 2       ;
-; spwm:inst|r[7]                                                                                                           ; 2       ;
-; spwm:inst|r[9]                                                                                                           ; 2       ;
-; spwm:inst|r[8]                                                                                                           ; 2       ;
-; spwm:inst|r[10]                                                                                                          ; 2       ;
-; spwm:inst|r[11]                                                                                                          ; 2       ;
-; spwm:inst|r[12]                                                                                                          ; 2       ;
-; spwm:inst|r[13]                                                                                                          ; 2       ;
-; spwm:inst|r[14]                                                                                                          ; 2       ;
-; spwm:inst|r[15]                                                                                                          ; 2       ;
-; spwm:inst|r[16]                                                                                                          ; 2       ;
-; spwm:inst|r[17]                                                                                                          ; 2       ;
-; spwm:inst|LessThan0~4                                                                                                    ; 2       ;
-; spwm:inst|LessThan1~2                                                                                                    ; 2       ;
-; spwm:inst|LessThan1~1                                                                                                    ; 2       ;
-; spwm:inst|LessThan1~0                                                                                                    ; 2       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~91                                                                                        ; 2       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~89                                                                                        ; 2       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~70                                                                                        ; 2       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~69                                                                                        ; 2       ;
-; spwm:inst|TRI_LUT:lut_tri|Equal0~0                                                                                       ; 2       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~97                                                                                         ; 2       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~96                                                                                         ; 2       ;
-; spwm:inst|SINE_LUT:lut_a|Equal0~0                                                                                        ; 2       ;
-; spwm:inst|p1                                                                                                             ; 2       ;
-; spwm:inst|Add2~12                                                                                                        ; 2       ;
-; spwm:inst|Add2~10                                                                                                        ; 2       ;
-; spwm:inst|Add2~8                                                                                                         ; 2       ;
-; spwm:inst|Add2~6                                                                                                         ; 2       ;
-; spwm:inst|Add2~4                                                                                                         ; 2       ;
-; spwm:inst|Add2~2                                                                                                         ; 2       ;
-; spwm:inst|Add2~0                                                                                                         ; 2       ;
-; spwm:inst|Add0~12                                                                                                        ; 2       ;
-; spwm:inst|Add0~10                                                                                                        ; 2       ;
-; spwm:inst|Add0~8                                                                                                         ; 2       ;
-; spwm:inst|Add0~6                                                                                                         ; 2       ;
-; spwm:inst|Add0~4                                                                                                         ; 2       ;
-; spwm:inst|Add0~2                                                                                                         ; 2       ;
-; spwm:inst|Add0~0                                                                                                         ; 2       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~4                                                                                         ; 2       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~1                                                                                          ; 2       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~126                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~125                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~124                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~123                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~122                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~121                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~120                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~119                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~118                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~117                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~102                                                                                       ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~101                                                                                       ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~100                                                                                       ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~99                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~116                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~115                                                                                        ; 1       ;
-; spwm:inst|LessThan0~6                                                                                                    ; 1       ;
-; spwm:inst|LessThan0~5                                                                                                    ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~98                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~63                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~54                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~114                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~90                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~113                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~81                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~112                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~77                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~111                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~110                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~96                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~52                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~109                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~53                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~108                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~41                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~43                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~42                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~38                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~40                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~39                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~107                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~106                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~19                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~21                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~20                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~105                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~8                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~10                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~9                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~5                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~7                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~6                                                                                          ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~95                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~94                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~93                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~104                                                                                        ; 1       ;
-; spwm:inst|r~6                                                                                                            ; 1       ;
-; spwm:inst|r~5                                                                                                            ; 1       ;
-; spwm:inst|r~4                                                                                                            ; 1       ;
-; spwm:inst|r~3                                                                                                            ; 1       ;
-; spwm:inst|r~2                                                                                                            ; 1       ;
-; spwm:inst|r~1                                                                                                            ; 1       ;
-; spwm:inst|r~0                                                                                                            ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[58]~7 ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[59]~6 ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[60]~5 ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[61]~4 ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[56]~3 ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[57]~2 ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[62]~1 ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[63]~0 ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[59]~7 ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[58]~6 ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[57]~5 ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[56]~4 ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[61]~3 ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[60]~2 ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[62]~1 ; 1       ;
-; spwm:inst|Equal0~9                                                                                                       ; 1       ;
-; spwm:inst|Equal0~8                                                                                                       ; 1       ;
-; spwm:inst|Equal0~7                                                                                                       ; 1       ;
-; spwm:inst|Equal0~6                                                                                                       ; 1       ;
-; spwm:inst|Equal0~5                                                                                                       ; 1       ;
-; spwm:inst|Equal0~4                                                                                                       ; 1       ;
-; spwm:inst|Equal0~3                                                                                                       ; 1       ;
-; spwm:inst|Equal0~2                                                                                                       ; 1       ;
-; spwm:inst|Equal0~1                                                                                                       ; 1       ;
-; spwm:inst|Equal0~0                                                                                                       ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[63]~0 ; 1       ;
-; spwm:inst|p1~9                                                                                                           ; 1       ;
-; spwm:inst|LessThan1~10                                                                                                   ; 1       ;
-; spwm:inst|LessThan1~9                                                                                                    ; 1       ;
-; spwm:inst|LessThan1~8                                                                                                    ; 1       ;
-; spwm:inst|LessThan1~7                                                                                                    ; 1       ;
-; spwm:inst|LessThan1~6                                                                                                    ; 1       ;
-; spwm:inst|LessThan1~5                                                                                                    ; 1       ;
-; spwm:inst|LessThan1~4                                                                                                    ; 1       ;
-; spwm:inst|LessThan1~3                                                                                                    ; 1       ;
-; spwm:inst|p1~8                                                                                                           ; 1       ;
-; spwm:inst|p1~7                                                                                                           ; 1       ;
-; spwm:inst|p1~6                                                                                                           ; 1       ;
-; spwm:inst|p1~5                                                                                                           ; 1       ;
-; spwm:inst|p1~4                                                                                                           ; 1       ;
-; spwm:inst|p1~3                                                                                                           ; 1       ;
-; spwm:inst|p1~2                                                                                                           ; 1       ;
-; spwm:inst|p1~1                                                                                                           ; 1       ;
-; spwm:inst|p1~0                                                                                                           ; 1       ;
-; spwm:inst|LessThan0~3                                                                                                    ; 1       ;
-; spwm:inst|LessThan0~2                                                                                                    ; 1       ;
-; spwm:inst|LessThan0~1                                                                                                    ; 1       ;
-; spwm:inst|LessThan0~0                                                                                                    ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~92                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~90                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~88                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~87                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~86                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~103                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~3                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~2                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~1                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~0                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~85                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~84                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~83                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~82                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~81                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~80                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~79                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~78                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~77                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~76                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~75                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~74                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~73                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~72                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Ram0~71                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~0                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~102                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~101                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~100                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~99                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Ram0~98                                                                                         ; 1       ;
-; spwm:inst|Add1~62                                                                                                        ; 1       ;
-; spwm:inst|Add1~61                                                                                                        ; 1       ;
-; spwm:inst|Add1~60                                                                                                        ; 1       ;
-; spwm:inst|Add1~59                                                                                                        ; 1       ;
-; spwm:inst|Add1~58                                                                                                        ; 1       ;
-; spwm:inst|Add1~57                                                                                                        ; 1       ;
-; spwm:inst|Add1~56                                                                                                        ; 1       ;
-; spwm:inst|Add1~55                                                                                                        ; 1       ;
-; spwm:inst|Add1~54                                                                                                        ; 1       ;
-; spwm:inst|Add1~53                                                                                                        ; 1       ;
-; spwm:inst|Add1~52                                                                                                        ; 1       ;
-; spwm:inst|Add1~51                                                                                                        ; 1       ;
-; spwm:inst|Add1~50                                                                                                        ; 1       ;
-; spwm:inst|Add1~49                                                                                                        ; 1       ;
-; spwm:inst|Add1~48                                                                                                        ; 1       ;
-; spwm:inst|Add1~47                                                                                                        ; 1       ;
-; spwm:inst|Add1~46                                                                                                        ; 1       ;
-; spwm:inst|Add1~45                                                                                                        ; 1       ;
-; spwm:inst|Add1~44                                                                                                        ; 1       ;
-; spwm:inst|Add1~43                                                                                                        ; 1       ;
-; spwm:inst|Add1~42                                                                                                        ; 1       ;
-; spwm:inst|Add1~41                                                                                                        ; 1       ;
-; spwm:inst|Add1~40                                                                                                        ; 1       ;
-; spwm:inst|Add1~39                                                                                                        ; 1       ;
-; spwm:inst|Add1~38                                                                                                        ; 1       ;
-; spwm:inst|Add1~37                                                                                                        ; 1       ;
-; spwm:inst|Add1~36                                                                                                        ; 1       ;
-; spwm:inst|Add1~35                                                                                                        ; 1       ;
-; spwm:inst|Add1~34                                                                                                        ; 1       ;
-; spwm:inst|Add1~33                                                                                                        ; 1       ;
-; spwm:inst|Add1~32                                                                                                        ; 1       ;
-; spwm:inst|Add1~31                                                                                                        ; 1       ;
-; spwm:inst|Add1~30                                                                                                        ; 1       ;
-; spwm:inst|Add1~29                                                                                                        ; 1       ;
-; spwm:inst|Add1~28                                                                                                        ; 1       ;
-; spwm:inst|Add1~27                                                                                                        ; 1       ;
-; spwm:inst|Add1~26                                                                                                        ; 1       ;
-; spwm:inst|Add1~25                                                                                                        ; 1       ;
-; spwm:inst|Add1~24                                                                                                        ; 1       ;
-; spwm:inst|Add1~23                                                                                                        ; 1       ;
-; spwm:inst|Add1~22                                                                                                        ; 1       ;
-; spwm:inst|Add1~21                                                                                                        ; 1       ;
-; spwm:inst|Add1~20                                                                                                        ; 1       ;
-; spwm:inst|Add1~19                                                                                                        ; 1       ;
-; spwm:inst|Add1~18                                                                                                        ; 1       ;
-; spwm:inst|Add1~17                                                                                                        ; 1       ;
-; spwm:inst|Add1~16                                                                                                        ; 1       ;
-; spwm:inst|Add1~15                                                                                                        ; 1       ;
-; spwm:inst|Add1~14                                                                                                        ; 1       ;
-; spwm:inst|Add1~13                                                                                                        ; 1       ;
-; spwm:inst|Add1~12                                                                                                        ; 1       ;
-; spwm:inst|Add1~11                                                                                                        ; 1       ;
-; spwm:inst|Add1~10                                                                                                        ; 1       ;
-; spwm:inst|Add1~9                                                                                                         ; 1       ;
-; spwm:inst|Add1~8                                                                                                         ; 1       ;
-; spwm:inst|Add1~7                                                                                                         ; 1       ;
-; spwm:inst|Add1~6                                                                                                         ; 1       ;
-; spwm:inst|Add1~5                                                                                                         ; 1       ;
-; spwm:inst|Add1~4                                                                                                         ; 1       ;
-; spwm:inst|Add1~3                                                                                                         ; 1       ;
-; spwm:inst|Add1~2                                                                                                         ; 1       ;
-; spwm:inst|Add1~1                                                                                                         ; 1       ;
-; spwm:inst|Add1~0                                                                                                         ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~15        ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~14        ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~13        ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~12        ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~11        ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~10        ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~9         ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~8         ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~7         ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~6         ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~5         ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~4         ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~3         ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~2         ; 1       ;
-; spwm:inst|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~1         ; 1       ;
-; spwm:inst|Add2~11                                                                                                        ; 1       ;
-; spwm:inst|Add2~9                                                                                                         ; 1       ;
-; spwm:inst|Add2~7                                                                                                         ; 1       ;
-; spwm:inst|Add2~5                                                                                                         ; 1       ;
-; spwm:inst|Add2~3                                                                                                         ; 1       ;
-; spwm:inst|Add2~1                                                                                                         ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~15        ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~14        ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~13        ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~12        ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~11        ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~10        ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~9         ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~8         ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~7         ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~6         ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~5         ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~4         ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~3         ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~2         ; 1       ;
-; spwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~1         ; 1       ;
-; spwm:inst|Add0~11                                                                                                        ; 1       ;
-; spwm:inst|Add0~9                                                                                                         ; 1       ;
-; spwm:inst|Add0~7                                                                                                         ; 1       ;
-; spwm:inst|Add0~5                                                                                                         ; 1       ;
-; spwm:inst|Add0~3                                                                                                         ; 1       ;
-; spwm:inst|Add0~1                                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~21                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~19                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~17                                                                                        ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~16                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~14                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~15                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~13                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~11                                                                                        ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~9                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~7                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add1~5                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add0~9                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add0~7                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add0~5                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add0~3                                                                                         ; 1       ;
-; spwm:inst|TRI_LUT:lut_tri|Add0~1                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~12                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~10                                                                                         ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~8                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~6                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~4                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add1~2                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add0~9                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add0~7                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add0~5                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add0~3                                                                                          ; 1       ;
-; spwm:inst|SINE_LUT:lut_a|Add0~1                                                                                          ; 1       ;
-+--------------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                                   ;
++-------------------------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                                    ; Fan-Out ;
++-------------------------------------------------------------------------------------------------------------------------+---------+
+; pwm:inst|Add3~11                                                                                                        ; 20      ;
+; pwm:inst|Add3~3                                                                                                         ; 20      ;
+; pwm:inst|Add3~5                                                                                                         ; 19      ;
+; pwm:inst|Add3~1                                                                                                         ; 18      ;
+; pwm:inst|Equal0~10                                                                                                      ; 16      ;
+; pwm:inst|Add3~9                                                                                                         ; 16      ;
+; pwm:inst|Add3~7                                                                                                         ; 15      ;
+; pwm:inst|THETA[6]                                                                                                       ; 9       ;
+; pwm:inst|Equal2~1                                                                                                       ; 8       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~16        ; 8       ;
+; pwm:inst|THETA[0]                                                                                                       ; 5       ;
+; pwm:inst|counter[0]                                                                                                     ; 4       ;
+; pwm:inst|THETA[1]                                                                                                       ; 3       ;
+; pwm:inst|THETA[2]                                                                                                       ; 3       ;
+; pwm:inst|THETA[3]                                                                                                       ; 3       ;
+; pwm:inst|THETA[4]                                                                                                       ; 3       ;
+; pwm:inst|THETA[5]                                                                                                       ; 3       ;
+; pwm:inst|r[1]                                                                                                           ; 2       ;
+; pwm:inst|r[2]                                                                                                           ; 2       ;
+; pwm:inst|r[3]                                                                                                           ; 2       ;
+; pwm:inst|r[4]                                                                                                           ; 2       ;
+; pwm:inst|r[5]                                                                                                           ; 2       ;
+; pwm:inst|r[7]                                                                                                           ; 2       ;
+; pwm:inst|r[6]                                                                                                           ; 2       ;
+; pwm:inst|r[10]                                                                                                          ; 2       ;
+; pwm:inst|r[8]                                                                                                           ; 2       ;
+; pwm:inst|r[9]                                                                                                           ; 2       ;
+; pwm:inst|r[11]                                                                                                          ; 2       ;
+; pwm:inst|r[12]                                                                                                          ; 2       ;
+; pwm:inst|r[13]                                                                                                          ; 2       ;
+; pwm:inst|r[15]                                                                                                          ; 2       ;
+; pwm:inst|r[14]                                                                                                          ; 2       ;
+; pwm:inst|r[16]                                                                                                          ; 2       ;
+; pwm:inst|r[17]                                                                                                          ; 2       ;
+; pwm:inst|r[18]                                                                                                          ; 2       ;
+; pwm:inst|r[19]                                                                                                          ; 2       ;
+; pwm:inst|r[20]                                                                                                          ; 2       ;
+; pwm:inst|r[21]                                                                                                          ; 2       ;
+; pwm:inst|r[23]                                                                                                          ; 2       ;
+; pwm:inst|r[22]                                                                                                          ; 2       ;
+; pwm:inst|r[24]                                                                                                          ; 2       ;
+; pwm:inst|r[25]                                                                                                          ; 2       ;
+; pwm:inst|r[26]                                                                                                          ; 2       ;
+; pwm:inst|r[27]                                                                                                          ; 2       ;
+; pwm:inst|r[28]                                                                                                          ; 2       ;
+; pwm:inst|r[29]                                                                                                          ; 2       ;
+; pwm:inst|r[30]                                                                                                          ; 2       ;
+; pwm:inst|r[31]                                                                                                          ; 2       ;
+; pwm:inst|Equal1~10                                                                                                      ; 2       ;
+; pwm:inst|counter[8]                                                                                                     ; 2       ;
+; pwm:inst|counter[9]                                                                                                     ; 2       ;
+; pwm:inst|counter[10]                                                                                                    ; 2       ;
+; pwm:inst|counter[11]                                                                                                    ; 2       ;
+; pwm:inst|counter[12]                                                                                                    ; 2       ;
+; pwm:inst|counter[13]                                                                                                    ; 2       ;
+; pwm:inst|counter[14]                                                                                                    ; 2       ;
+; pwm:inst|counter[15]                                                                                                    ; 2       ;
+; pwm:inst|counter[16]                                                                                                    ; 2       ;
+; pwm:inst|counter[17]                                                                                                    ; 2       ;
+; pwm:inst|counter[18]                                                                                                    ; 2       ;
+; pwm:inst|counter[19]                                                                                                    ; 2       ;
+; pwm:inst|counter[20]                                                                                                    ; 2       ;
+; pwm:inst|counter[21]                                                                                                    ; 2       ;
+; pwm:inst|counter[22]                                                                                                    ; 2       ;
+; pwm:inst|counter[23]                                                                                                    ; 2       ;
+; pwm:inst|counter[24]                                                                                                    ; 2       ;
+; pwm:inst|counter[25]                                                                                                    ; 2       ;
+; pwm:inst|counter[26]                                                                                                    ; 2       ;
+; pwm:inst|counter[27]                                                                                                    ; 2       ;
+; pwm:inst|counter[28]                                                                                                    ; 2       ;
+; pwm:inst|counter[29]                                                                                                    ; 2       ;
+; pwm:inst|counter[30]                                                                                                    ; 2       ;
+; pwm:inst|counter[31]                                                                                                    ; 2       ;
+; pwm:inst|Ram0~37                                                                                                        ; 2       ;
+; pwm:inst|Ram0~36                                                                                                        ; 2       ;
+; pwm:inst|Ram0~35                                                                                                        ; 2       ;
+; pwm:inst|Ram0~10                                                                                                        ; 2       ;
+; pwm:inst|Ram0~9                                                                                                         ; 2       ;
+; pwm:inst|counter[1]                                                                                                     ; 2       ;
+; pwm:inst|counter[2]                                                                                                     ; 2       ;
+; pwm:inst|counter[3]                                                                                                     ; 2       ;
+; pwm:inst|counter[4]                                                                                                     ; 2       ;
+; pwm:inst|counter[5]                                                                                                     ; 2       ;
+; pwm:inst|counter[6]                                                                                                     ; 2       ;
+; pwm:inst|counter[7]                                                                                                     ; 2       ;
+; pwm:inst|Add0~12                                                                                                        ; 2       ;
+; pwm:inst|Add0~10                                                                                                        ; 2       ;
+; pwm:inst|Add0~8                                                                                                         ; 2       ;
+; pwm:inst|Add0~6                                                                                                         ; 2       ;
+; pwm:inst|Add0~4                                                                                                         ; 2       ;
+; pwm:inst|Add0~2                                                                                                         ; 2       ;
+; pwm:inst|Add0~0                                                                                                         ; 2       ;
+; pwm:inst|Add2~62                                                                                                        ; 2       ;
+; pwm:inst|Add2~60                                                                                                        ; 2       ;
+; pwm:inst|Add2~58                                                                                                        ; 2       ;
+; pwm:inst|Add2~56                                                                                                        ; 2       ;
+; pwm:inst|Add2~54                                                                                                        ; 2       ;
+; pwm:inst|Add2~52                                                                                                        ; 2       ;
+; pwm:inst|Add2~50                                                                                                        ; 2       ;
+; pwm:inst|Add2~48                                                                                                        ; 2       ;
+; pwm:inst|Add2~46                                                                                                        ; 2       ;
+; pwm:inst|Add2~44                                                                                                        ; 2       ;
+; pwm:inst|Add2~42                                                                                                        ; 2       ;
+; pwm:inst|Add2~40                                                                                                        ; 2       ;
+; pwm:inst|Add2~38                                                                                                        ; 2       ;
+; pwm:inst|Add2~36                                                                                                        ; 2       ;
+; pwm:inst|Add2~34                                                                                                        ; 2       ;
+; pwm:inst|Add2~32                                                                                                        ; 2       ;
+; pwm:inst|Add2~30                                                                                                        ; 2       ;
+; pwm:inst|Add2~28                                                                                                        ; 2       ;
+; pwm:inst|Add2~26                                                                                                        ; 2       ;
+; pwm:inst|Add2~24                                                                                                        ; 2       ;
+; pwm:inst|Add2~22                                                                                                        ; 2       ;
+; pwm:inst|Add2~20                                                                                                        ; 2       ;
+; pwm:inst|Add2~18                                                                                                        ; 2       ;
+; pwm:inst|Add2~16                                                                                                        ; 2       ;
+; pwm:inst|Add2~14                                                                                                        ; 2       ;
+; pwm:inst|Add2~12                                                                                                        ; 2       ;
+; pwm:inst|Add2~10                                                                                                        ; 2       ;
+; pwm:inst|Add2~8                                                                                                         ; 2       ;
+; pwm:inst|Add2~6                                                                                                         ; 2       ;
+; pwm:inst|Add2~4                                                                                                         ; 2       ;
+; pwm:inst|Add2~2                                                                                                         ; 2       ;
+; pwm:inst|Add2~0                                                                                                         ; 2       ;
+; pwm:inst|r~7                                                                                                            ; 1       ;
+; pwm:inst|r~6                                                                                                            ; 1       ;
+; pwm:inst|r~5                                                                                                            ; 1       ;
+; pwm:inst|r~4                                                                                                            ; 1       ;
+; pwm:inst|r~3                                                                                                            ; 1       ;
+; pwm:inst|r~2                                                                                                            ; 1       ;
+; pwm:inst|r~1                                                                                                            ; 1       ;
+; pwm:inst|r~0                                                                                                            ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[63]~7 ; 1       ;
+; pwm:inst|counter~0                                                                                                      ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[56]~6 ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[57]~5 ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[58]~4 ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[59]~3 ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[60]~2 ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[61]~1 ; 1       ;
+; pwm:inst|Equal0~9                                                                                                       ; 1       ;
+; pwm:inst|Equal0~8                                                                                                       ; 1       ;
+; pwm:inst|Equal0~7                                                                                                       ; 1       ;
+; pwm:inst|Equal0~6                                                                                                       ; 1       ;
+; pwm:inst|Equal0~5                                                                                                       ; 1       ;
+; pwm:inst|Equal0~4                                                                                                       ; 1       ;
+; pwm:inst|Equal0~3                                                                                                       ; 1       ;
+; pwm:inst|Equal0~2                                                                                                       ; 1       ;
+; pwm:inst|Equal0~1                                                                                                       ; 1       ;
+; pwm:inst|Equal0~0                                                                                                       ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|StageOut[62]~0 ; 1       ;
+; pwm:inst|THETA[7]                                                                                                       ; 1       ;
+; pwm:inst|LessThan0~24                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~23                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~22                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~21                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~20                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~19                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~18                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~17                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~16                                                                                                   ; 1       ;
+; pwm:inst|Equal1~9                                                                                                       ; 1       ;
+; pwm:inst|Equal1~8                                                                                                       ; 1       ;
+; pwm:inst|Equal1~7                                                                                                       ; 1       ;
+; pwm:inst|Equal1~6                                                                                                       ; 1       ;
+; pwm:inst|Equal1~5                                                                                                       ; 1       ;
+; pwm:inst|Equal1~4                                                                                                       ; 1       ;
+; pwm:inst|Equal1~3                                                                                                       ; 1       ;
+; pwm:inst|Equal1~2                                                                                                       ; 1       ;
+; pwm:inst|Equal1~1                                                                                                       ; 1       ;
+; pwm:inst|Equal1~0                                                                                                       ; 1       ;
+; pwm:inst|Ram0~40                                                                                                        ; 1       ;
+; pwm:inst|Ram0~39                                                                                                        ; 1       ;
+; pwm:inst|Ram0~38                                                                                                        ; 1       ;
+; pwm:inst|Ram0~34                                                                                                        ; 1       ;
+; pwm:inst|Ram0~33                                                                                                        ; 1       ;
+; pwm:inst|Ram0~32                                                                                                        ; 1       ;
+; pwm:inst|Ram0~31                                                                                                        ; 1       ;
+; pwm:inst|Ram0~30                                                                                                        ; 1       ;
+; pwm:inst|Ram0~29                                                                                                        ; 1       ;
+; pwm:inst|Ram0~28                                                                                                        ; 1       ;
+; pwm:inst|Ram0~27                                                                                                        ; 1       ;
+; pwm:inst|Ram0~26                                                                                                        ; 1       ;
+; pwm:inst|Ram0~25                                                                                                        ; 1       ;
+; pwm:inst|Ram0~24                                                                                                        ; 1       ;
+; pwm:inst|Ram0~23                                                                                                        ; 1       ;
+; pwm:inst|Ram0~22                                                                                                        ; 1       ;
+; pwm:inst|Ram0~21                                                                                                        ; 1       ;
+; pwm:inst|Ram0~20                                                                                                        ; 1       ;
+; pwm:inst|Ram0~19                                                                                                        ; 1       ;
+; pwm:inst|Ram0~18                                                                                                        ; 1       ;
+; pwm:inst|Ram0~17                                                                                                        ; 1       ;
+; pwm:inst|Ram0~16                                                                                                        ; 1       ;
+; pwm:inst|Ram0~15                                                                                                        ; 1       ;
+; pwm:inst|Ram0~14                                                                                                        ; 1       ;
+; pwm:inst|Ram0~13                                                                                                        ; 1       ;
+; pwm:inst|Ram0~12                                                                                                        ; 1       ;
+; pwm:inst|Ram0~11                                                                                                        ; 1       ;
+; pwm:inst|Ram0~8                                                                                                         ; 1       ;
+; pwm:inst|Ram0~7                                                                                                         ; 1       ;
+; pwm:inst|Ram0~6                                                                                                         ; 1       ;
+; pwm:inst|Ram0~5                                                                                                         ; 1       ;
+; pwm:inst|Ram0~4                                                                                                         ; 1       ;
+; pwm:inst|Ram0~3                                                                                                         ; 1       ;
+; pwm:inst|Ram0~2                                                                                                         ; 1       ;
+; pwm:inst|Ram0~1                                                                                                         ; 1       ;
+; pwm:inst|Ram0~0                                                                                                         ; 1       ;
+; pwm:inst|Add3~0                                                                                                         ; 1       ;
+; pwm:inst|Equal2~0                                                                                                       ; 1       ;
+; pwm:inst|pwm                                                                                                            ; 1       ;
+; pwm:inst|Add1~60                                                                                                        ; 1       ;
+; pwm:inst|Add1~59                                                                                                        ; 1       ;
+; pwm:inst|Add1~58                                                                                                        ; 1       ;
+; pwm:inst|Add1~57                                                                                                        ; 1       ;
+; pwm:inst|Add1~56                                                                                                        ; 1       ;
+; pwm:inst|Add1~55                                                                                                        ; 1       ;
+; pwm:inst|Add1~54                                                                                                        ; 1       ;
+; pwm:inst|Add1~53                                                                                                        ; 1       ;
+; pwm:inst|Add1~52                                                                                                        ; 1       ;
+; pwm:inst|Add1~51                                                                                                        ; 1       ;
+; pwm:inst|Add1~50                                                                                                        ; 1       ;
+; pwm:inst|Add1~49                                                                                                        ; 1       ;
+; pwm:inst|Add1~48                                                                                                        ; 1       ;
+; pwm:inst|Add1~47                                                                                                        ; 1       ;
+; pwm:inst|Add1~46                                                                                                        ; 1       ;
+; pwm:inst|Add1~45                                                                                                        ; 1       ;
+; pwm:inst|Add1~44                                                                                                        ; 1       ;
+; pwm:inst|Add1~43                                                                                                        ; 1       ;
+; pwm:inst|Add1~42                                                                                                        ; 1       ;
+; pwm:inst|Add1~41                                                                                                        ; 1       ;
+; pwm:inst|Add1~40                                                                                                        ; 1       ;
+; pwm:inst|Add1~39                                                                                                        ; 1       ;
+; pwm:inst|Add1~38                                                                                                        ; 1       ;
+; pwm:inst|Add1~37                                                                                                        ; 1       ;
+; pwm:inst|Add1~36                                                                                                        ; 1       ;
+; pwm:inst|Add1~35                                                                                                        ; 1       ;
+; pwm:inst|Add1~34                                                                                                        ; 1       ;
+; pwm:inst|Add1~33                                                                                                        ; 1       ;
+; pwm:inst|Add1~32                                                                                                        ; 1       ;
+; pwm:inst|Add1~31                                                                                                        ; 1       ;
+; pwm:inst|Add1~30                                                                                                        ; 1       ;
+; pwm:inst|Add1~29                                                                                                        ; 1       ;
+; pwm:inst|Add1~28                                                                                                        ; 1       ;
+; pwm:inst|Add1~27                                                                                                        ; 1       ;
+; pwm:inst|Add1~26                                                                                                        ; 1       ;
+; pwm:inst|Add1~25                                                                                                        ; 1       ;
+; pwm:inst|Add1~24                                                                                                        ; 1       ;
+; pwm:inst|Add1~23                                                                                                        ; 1       ;
+; pwm:inst|Add1~22                                                                                                        ; 1       ;
+; pwm:inst|Add1~21                                                                                                        ; 1       ;
+; pwm:inst|Add1~20                                                                                                        ; 1       ;
+; pwm:inst|Add1~19                                                                                                        ; 1       ;
+; pwm:inst|Add1~18                                                                                                        ; 1       ;
+; pwm:inst|Add1~17                                                                                                        ; 1       ;
+; pwm:inst|Add1~16                                                                                                        ; 1       ;
+; pwm:inst|Add1~15                                                                                                        ; 1       ;
+; pwm:inst|Add1~14                                                                                                        ; 1       ;
+; pwm:inst|Add1~13                                                                                                        ; 1       ;
+; pwm:inst|Add1~12                                                                                                        ; 1       ;
+; pwm:inst|Add1~11                                                                                                        ; 1       ;
+; pwm:inst|Add1~10                                                                                                        ; 1       ;
+; pwm:inst|Add1~9                                                                                                         ; 1       ;
+; pwm:inst|Add1~8                                                                                                         ; 1       ;
+; pwm:inst|Add1~7                                                                                                         ; 1       ;
+; pwm:inst|Add1~6                                                                                                         ; 1       ;
+; pwm:inst|Add1~5                                                                                                         ; 1       ;
+; pwm:inst|Add1~4                                                                                                         ; 1       ;
+; pwm:inst|Add1~3                                                                                                         ; 1       ;
+; pwm:inst|Add1~2                                                                                                         ; 1       ;
+; pwm:inst|Add1~1                                                                                                         ; 1       ;
+; pwm:inst|Add1~0                                                                                                         ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~15        ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~14        ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~13        ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~12        ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~11        ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~10        ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~9         ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~8         ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~7         ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~6         ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~5         ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~4         ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~3         ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~2         ; 1       ;
+; pwm:inst|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|op_6~1         ; 1       ;
+; pwm:inst|Add0~11                                                                                                        ; 1       ;
+; pwm:inst|Add0~9                                                                                                         ; 1       ;
+; pwm:inst|Add0~7                                                                                                         ; 1       ;
+; pwm:inst|Add0~5                                                                                                         ; 1       ;
+; pwm:inst|Add0~3                                                                                                         ; 1       ;
+; pwm:inst|Add0~1                                                                                                         ; 1       ;
+; pwm:inst|Add2~61                                                                                                        ; 1       ;
+; pwm:inst|Add2~59                                                                                                        ; 1       ;
+; pwm:inst|Add2~57                                                                                                        ; 1       ;
+; pwm:inst|Add2~55                                                                                                        ; 1       ;
+; pwm:inst|Add2~53                                                                                                        ; 1       ;
+; pwm:inst|Add2~51                                                                                                        ; 1       ;
+; pwm:inst|Add2~49                                                                                                        ; 1       ;
+; pwm:inst|Add2~47                                                                                                        ; 1       ;
+; pwm:inst|Add2~45                                                                                                        ; 1       ;
+; pwm:inst|Add2~43                                                                                                        ; 1       ;
+; pwm:inst|Add2~41                                                                                                        ; 1       ;
+; pwm:inst|Add2~39                                                                                                        ; 1       ;
+; pwm:inst|Add2~37                                                                                                        ; 1       ;
+; pwm:inst|Add2~35                                                                                                        ; 1       ;
+; pwm:inst|Add2~33                                                                                                        ; 1       ;
+; pwm:inst|Add2~31                                                                                                        ; 1       ;
+; pwm:inst|Add2~29                                                                                                        ; 1       ;
+; pwm:inst|Add2~27                                                                                                        ; 1       ;
+; pwm:inst|Add2~25                                                                                                        ; 1       ;
+; pwm:inst|Add2~23                                                                                                        ; 1       ;
+; pwm:inst|Add2~21                                                                                                        ; 1       ;
+; pwm:inst|Add2~19                                                                                                        ; 1       ;
+; pwm:inst|Add2~17                                                                                                        ; 1       ;
+; pwm:inst|LessThan0~14                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~13                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~11                                                                                                   ; 1       ;
+; pwm:inst|LessThan0~9                                                                                                    ; 1       ;
+; pwm:inst|LessThan0~7                                                                                                    ; 1       ;
+; pwm:inst|LessThan0~5                                                                                                    ; 1       ;
+; pwm:inst|LessThan0~3                                                                                                    ; 1       ;
+; pwm:inst|LessThan0~1                                                                                                    ; 1       ;
+; pwm:inst|Add2~15                                                                                                        ; 1       ;
+; pwm:inst|Add2~13                                                                                                        ; 1       ;
+; pwm:inst|Add2~11                                                                                                        ; 1       ;
+; pwm:inst|Add2~9                                                                                                         ; 1       ;
+; pwm:inst|Add2~7                                                                                                         ; 1       ;
+; pwm:inst|Add2~5                                                                                                         ; 1       ;
+; pwm:inst|Add2~3                                                                                                         ; 1       ;
+; pwm:inst|Add2~1                                                                                                         ; 1       ;
+; pwm:inst|Add3~10                                                                                                        ; 1       ;
+; pwm:inst|Add3~8                                                                                                         ; 1       ;
+; pwm:inst|Add3~6                                                                                                         ; 1       ;
+; pwm:inst|Add3~4                                                                                                         ; 1       ;
+; pwm:inst|Add3~2                                                                                                         ; 1       ;
++-------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -1553,47 +1489,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 248 / 71,559 ( < 1 % ) ;
-; C16 interconnects           ; 1 / 2,597 ( < 1 % )    ;
-; C4 interconnects            ; 56 / 46,848 ( < 1 % )  ;
-; Direct links                ; 103 / 71,559 ( < 1 % ) ;
+; Block interconnects         ; 190 / 71,559 ( < 1 % ) ;
+; C16 interconnects           ; 0 / 2,597 ( 0 % )      ;
+; C4 interconnects            ; 47 / 46,848 ( < 1 % )  ;
+; Direct links                ; 82 / 71,559 ( < 1 % )  ;
 ; Global clocks               ; 1 / 20 ( 5 % )         ;
-; Local interconnects         ; 178 / 24,624 ( < 1 % ) ;
+; Local interconnects         ; 132 / 24,624 ( < 1 % ) ;
 ; R24 interconnects           ; 1 / 2,496 ( < 1 % )    ;
-; R4 interconnects            ; 101 / 62,424 ( < 1 % ) ;
+; R4 interconnects            ; 82 / 62,424 ( < 1 % )  ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 14.61) ; Number of LABs  (Total = 18) ;
+; Number of Logic Elements  (Average = 13.21) ; Number of LABs  (Total = 14) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 0                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 1                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 0                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 1                            ;
 ; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 2                            ;
-; 12                                          ; 0                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 1                            ;
 ; 13                                          ; 0                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 13                           ;
+; 14                                          ; 2                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 8                            ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.56) ; Number of LABs  (Total = 18) ;
+; LAB-wide Signals  (Average = 0.79) ; Number of LABs  (Total = 14) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 8                            ;
+; 1 Clock                            ; 9                            ;
 ; 1 Clock enable                     ; 2                            ;
 +------------------------------------+------------------------------+
 
@@ -1601,100 +1537,124 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.11) ; Number of LABs  (Total = 18) ;
+; Number of Signals Sourced  (Average = 17.79) ; Number of LABs  (Total = 14) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 1                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 2                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 2                            ;
-; 16                                           ; 5                            ;
-; 17                                           ; 2                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 1                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 0                            ;
+; 21                                           ; 0                            ;
 ; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
+; 24                                           ; 1                            ;
 ; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
+; 26                                           ; 1                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
+; 28                                           ; 0                            ;
 ; 29                                           ; 1                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 1                            ;
+; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                        ;
-+-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.83) ; Number of LABs  (Total = 18) ;
-+-------------------------------------------------+------------------------------+
-; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
-; 2                                               ; 1                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 3                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 0                            ;
-; 7                                               ; 0                            ;
-; 8                                               ; 2                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 2                            ;
-; 11                                              ; 2                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 0                            ;
-; 14                                              ; 0                            ;
-; 15                                              ; 2                            ;
-; 16                                              ; 2                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 1                            ;
-+-------------------------------------------------+------------------------------+
++---------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                         ;
++--------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 10.64) ; Number of LABs  (Total = 14) ;
++--------------------------------------------------+------------------------------+
+; 0                                                ; 0                            ;
+; 1                                                ; 1                            ;
+; 2                                                ; 1                            ;
+; 3                                                ; 2                            ;
+; 4                                                ; 2                            ;
+; 5                                                ; 0                            ;
+; 6                                                ; 0                            ;
+; 7                                                ; 1                            ;
+; 8                                                ; 1                            ;
+; 9                                                ; 1                            ;
+; 10                                               ; 0                            ;
+; 11                                               ; 0                            ;
+; 12                                               ; 0                            ;
+; 13                                               ; 1                            ;
+; 14                                               ; 0                            ;
+; 15                                               ; 0                            ;
+; 16                                               ; 2                            ;
+; 17                                               ; 0                            ;
+; 18                                               ; 0                            ;
+; 19                                               ; 0                            ;
+; 20                                               ; 0                            ;
+; 21                                               ; 0                            ;
+; 22                                               ; 0                            ;
+; 23                                               ; 0                            ;
+; 24                                               ; 0                            ;
+; 25                                               ; 0                            ;
+; 26                                               ; 0                            ;
+; 27                                               ; 0                            ;
+; 28                                               ; 0                            ;
+; 29                                               ; 0                            ;
+; 30                                               ; 0                            ;
+; 31                                               ; 1                            ;
+; 32                                               ; 1                            ;
++--------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 12.50) ; Number of LABs  (Total = 18) ;
+; Number of Distinct Inputs  (Average = 13.21) ; Number of LABs  (Total = 14) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
+; 2                                            ; 2                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
-; 5                                            ; 2                            ;
+; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 4                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 2                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 3                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 1                            ;
 ; 15                                           ; 0                            ;
 ; 16                                           ; 0                            ;
-; 17                                           ; 1                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 3                            ;
+; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
+; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
+; 24                                           ; 1                            ;
 ; 25                                           ; 0                            ;
 ; 26                                           ; 1                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 0                            ;
+; 33                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2266,7 +2226,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "SW[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[3]" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -2274,11 +2234,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X43_Y23 to location X53_Y34
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2289,9 +2249,9 @@ Warning (169177): 1 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at R8
 Info (144001): Generated suppressed messages file C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/test.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 446 warnings
-    Info: Peak virtual memory: 722 megabytes
-    Info: Processing ended: Sun Jul 26 23:14:31 2015
-    Info: Elapsed time: 00:00:17
+    Info: Peak virtual memory: 720 megabytes
+    Info: Processing ended: Mon Jul 27 15:51:14 2015
+    Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:17
 
 

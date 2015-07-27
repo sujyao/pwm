@@ -7,8 +7,10 @@ module  pwm(
 	
 	integer counter;
 	integer dut;
-	integer div = 500000;
+	integer div = 5000000;
 	integer r = 0;
+	integer dely = 0;
+	integer THETA_TMP_COUNTER = 0;
 	
 	reg  [7:0] THETA = 8'd0;
 	reg [8:0] THETA_TMP;        //Lower bits of THETA (counting up or counting down)
@@ -19,7 +21,7 @@ module  pwm(
 	
 always @(posedge clk) begin
     if(r == div ) begin
-        THETA <= (THETA + 8'b1) % 8'd255; // theta_a is flopped
+        THETA <= (THETA + 8'b1) % 8'd255; // theta_a is flopped theat 0 to 255
         r <= 1;
     end
 	 
@@ -29,6 +31,8 @@ always @(posedge clk) begin
 end 
 	
 always @(posedge clk) begin
+	
+	pwm = 1'b1;
 	if(counter == 255) begin
 		counter = 0;
 		pwm = 1'b1; 
@@ -39,23 +43,26 @@ always @(posedge clk) begin
 		pwm = pwm;
 	end
 	
-	if(counter >= SINE_OUT)
-		pwm = 1'b0;
+	if(counter <= SINE_OUT)
+		pwm = 1'b1;
 	else
-		pwm =1'b1;
+		pwm =1'b0;
 		
 		
 end
 always @(THETA) begin
-
-	 THETA_HLP = 7'd64 - {1'd0, THETA[5:0]};
-	 THETA_TMP = THETA[6] ? THETA_HLP[5:0] : THETA[6];
-	 
-    if (THETA[6:0] == 7'd64) begin          //At 90 degrees and 270 degrees
+    if (THETA[6:0] == 7'd64) begin        
         SINE_TMP = 9'd255;
     end
     else begin
-        case (THETA_TMP)                    //Look Up Table (quarter wave)
+        if (THETA[6]) begin                 //If counting down should begin reverse counting order
+            THETA_HLP = 7'd64 - {1'd0, THETA[5:0]}; // counting down 
+            THETA_TMP = {THETA_HLP[5:0]};
+        end
+        else begin                          //Continue counting up by default
+            THETA_TMP = {THETA[5:0]};
+        end
+        case (THETA_TMP)                    //Look Up Table half wave 
         6'd0: SINE_TMP = 9'd0;
         6'd1: SINE_TMP = 9'd6;
         6'd2: SINE_TMP = 9'd13;
@@ -123,17 +130,27 @@ always @(THETA) begin
 
         endcase
     end
+	 
+	 SINE_OUT = SINE_TMP;
+	 /*
+	 if(THETA_TMP == 6'd0) begin
+		THETA_TMP_COUNTER = THETA_TMP_COUNTER + 1;
+	 end
+	 else begin
+		THETA_TMP_COUNTER = THETA_TMP_COUNTER;
+	 end
+	 if(THETA_TMP_COUNTER == 2) begin
+		SINE_OUT = 9'b0;
+		dely = dely + 1;
+		if(dely == 500) begin // changing the dely time here
+			THETA_TMP_COUNTER = 0;
+			dely = 0;
+		end 
+	 
+	 end 
+	 
+  */
 
-    if (THETA > 8'd128) begin               //Any theta between 180 and 360 degrees should be negative
-        SINE_OUT = (~SINE_TMP) + 1'd1;      //Create negative value in two's compliment
-    end
-    else begin                              //Any theta between 0 and 180 degrees should be positive
-        SINE_OUT = SINE_TMP;
-    end
-
-
-			
-	
 end
 
 	
