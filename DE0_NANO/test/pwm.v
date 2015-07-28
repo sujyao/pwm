@@ -9,8 +9,9 @@ module  pwm(
 	integer dut;
 	integer div = 5000000;
 	integer r = 0;
-	integer dely = 0;
-	integer THETA_TMP_COUNTER = 0;
+	integer delay = 0;
+	integer THETA_TMP_COUNTER;
+	//integer x;
 	
 	reg  [7:0] THETA = 8'd0;
 	reg [8:0] THETA_TMP;        //Lower bits of THETA (counting up or counting down)
@@ -20,20 +21,59 @@ module  pwm(
 	reg [10:0] SINE_OUT;         //Output Sine in two's compliment
 	
 always @(posedge clk) begin
+
+
+
     if(r == div ) begin
-        THETA <= (THETA + 8'b1) % 8'd255; // theta_a is flopped theat 0 to 255
+       THETA <= (THETA + 8'b1) % 8'd255; // theta_a is flopped theat 0 to 255  
         r <= 1;
+		  
+		  		   //adding delay here 	 
+			if(THETA == 8'd0) begin
+				THETA_TMP_COUNTER = THETA_TMP_COUNTER + 1;
+			end
+			else begin
+				THETA_TMP_COUNTER = THETA_TMP_COUNTER;
+			end
+
+				
+		  //end of delay.
+		
+			
+		 
     end
 	 
     else begin
-        r <= r + 1;
+        
+		  
+		  	if(THETA_TMP_COUNTER == 2) begin
+				//div = 40;
+			   THETA = 9'd0;
+				if(delay == 500000000) begin
+					 THETA_TMP_COUNTER = 0;
+					 delay = 0;
+				end
+				else begin 
+					delay = delay + 1;
+				end 
+					 
+			end
+			
+			else begin
+				r <= r + 1;
+			end
+		  
+		  
     end
+	 
+
+	 
 end 
-	
+	// pwm generator 
 always @(posedge clk) begin
 	
 	pwm = 1'b1;
-	if(counter == 255) begin
+	if(counter == 255) begin // Top value, set to setup pwm fre.
 		counter = 0;
 		pwm = 1'b1; 
 	end
@@ -43,7 +83,7 @@ always @(posedge clk) begin
 		pwm = pwm;
 	end
 	
-	if(counter <= SINE_OUT)
+	if(counter <= SINE_OUT) // duty cycle value 
 		pwm = 1'b1;
 	else
 		pwm =1'b0;
@@ -62,8 +102,11 @@ always @(THETA) begin
         else begin                          //Continue counting up by default
             THETA_TMP = {THETA[5:0]};
         end
+		  
+
+		 
         case (THETA_TMP)                    //Look Up Table half wave 
-        6'd0: SINE_TMP = 9'd0;
+        6'd0: SINE_TMP = 9'd0;	  
         6'd1: SINE_TMP = 9'd6;
         6'd2: SINE_TMP = 9'd13;
         6'd3: SINE_TMP = 9'd19;
@@ -127,29 +170,16 @@ always @(THETA) begin
         6'd61: SINE_TMP = 9'd254;
         6'd62: SINE_TMP = 9'd255;
         6'd63: SINE_TMP = 9'd255;
+		  default: SINE_TMP = 9'd00;
 
         endcase
     end
 	 
 	 SINE_OUT = SINE_TMP;
-	 /*
-	 if(THETA_TMP == 6'd0) begin
-		THETA_TMP_COUNTER = THETA_TMP_COUNTER + 1;
-	 end
-	 else begin
-		THETA_TMP_COUNTER = THETA_TMP_COUNTER;
-	 end
-	 if(THETA_TMP_COUNTER == 2) begin
-		SINE_OUT = 9'b0;
-		dely = dely + 1;
-		if(dely == 500) begin // changing the dely time here
-			THETA_TMP_COUNTER = 0;
-			dely = 0;
-		end 
 	 
-	 end 
+
 	 
-  */
+  
 
 end
 
