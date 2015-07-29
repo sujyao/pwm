@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for test
-Tue Jul 28 23:12:00 2015
+Wed Jul 29 23:10:44 2015
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -112,7 +112,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; test.SDC      ; OK     ; Tue Jul 28 23:11:56 2015 ;
+; test.SDC      ; OK     ; Wed Jul 29 23:10:40 2015 ;
 +---------------+--------+--------------------------+
 
 
@@ -130,7 +130,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 173.34 MHz ; 173.34 MHz      ; CLOCK_50   ;      ;
+; 167.56 MHz ; 167.56 MHz      ; CLOCK_50   ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -146,7 +146,7 @@ HTML report is unavailable in plain text report export.
 +----------+--------+-----------------+
 ; Clock    ; Slack  ; End Point TNS   ;
 +----------+--------+-----------------+
-; CLOCK_50 ; -4.769 ; -397.534        ;
+; CLOCK_50 ; -4.968 ; -414.750        ;
 +----------+--------+-----------------+
 
 
@@ -155,7 +155,7 @@ HTML report is unavailable in plain text report export.
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; CLOCK_50 ; 0.343 ; 0.000           ;
+; CLOCK_50 ; 0.357 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -176,116 +176,116 @@ No paths to report.
 +----------+--------+-------------------------------+
 ; Clock    ; Slack  ; End Point TNS                 ;
 +----------+--------+-------------------------------+
-; CLOCK_50 ; -3.000 ; -140.000                      ;
+; CLOCK_50 ; -3.000 ; -139.000                      ;
 +----------+--------+-------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup: 'CLOCK_50'                                                                                             ;
-+--------+---------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node           ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -4.769 ; pwm:inst|THETA[0]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.290      ; 6.054      ;
-; -4.586 ; pwm:inst|THETA[6]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.290      ; 5.871      ;
-; -4.370 ; pwm:inst|THETA[1]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.291      ; 5.656      ;
-; -4.337 ; pwm:inst|counter[1] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.283      ; 5.615      ;
-; -4.273 ; pwm:inst|THETA[2]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.290      ; 5.558      ;
-; -4.254 ; pwm:inst|counter[0] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.283      ; 5.532      ;
-; -4.232 ; pwm:inst|THETA[3]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.291      ; 5.518      ;
-; -4.218 ; pwm:inst|counter[3] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.283      ; 5.496      ;
-; -4.139 ; pwm:inst|counter[2] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.283      ; 5.417      ;
-; -4.105 ; pwm:inst|counter[5] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.283      ; 5.383      ;
-; -4.066 ; pwm:inst|THETA[4]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.291      ; 5.352      ;
-; -4.023 ; pwm:inst|counter[4] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.283      ; 5.301      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.019 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.426     ; 4.588      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -4.002 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.934      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.996 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.428     ; 4.563      ;
-; -3.992 ; pwm:inst|counter[7] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.283      ; 5.270      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.970 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.902      ;
-; -3.931 ; pwm:inst|counter[8] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.282      ; 5.208      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.918 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.853      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.912 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.847      ;
-; -3.911 ; pwm:inst|counter[6] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.283      ; 5.189      ;
-; -3.893 ; pwm:inst|r[10]      ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 4.828      ;
-+--------+---------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLOCK_50'                                                                                                        ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.968 ; pwm:inst|THETA[6]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.285      ; 6.248      ;
+; -4.600 ; pwm:inst|THETA[0]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.285      ; 5.880      ;
+; -4.546 ; pwm:inst|THETA[1]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.285      ; 5.826      ;
+; -4.346 ; pwm:inst|THETA[2]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.285      ; 5.626      ;
+; -4.263 ; pwm:inst|THETA[3]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.285      ; 5.543      ;
+; -4.100 ; pwm:inst|counter[0]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.311      ; 5.406      ;
+; -4.097 ; pwm:inst|counter[1]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.311      ; 5.403      ;
+; -4.083 ; pwm:inst|THETA[0]              ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 5.001      ;
+; -4.083 ; pwm:inst|THETA[0]              ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 5.001      ;
+; -4.083 ; pwm:inst|THETA[0]              ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 5.001      ;
+; -4.083 ; pwm:inst|THETA[0]              ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 5.001      ;
+; -4.042 ; pwm:inst|THETA[1]              ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.960      ;
+; -4.042 ; pwm:inst|THETA[1]              ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.960      ;
+; -4.042 ; pwm:inst|THETA[1]              ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.960      ;
+; -4.042 ; pwm:inst|THETA[1]              ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.960      ;
+; -4.040 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.962      ;
+; -4.040 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.962      ;
+; -4.040 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.962      ;
+; -4.040 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.962      ;
+; -4.026 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.948      ;
+; -4.026 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.948      ;
+; -4.026 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.948      ;
+; -4.026 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.948      ;
+; -4.004 ; pwm:inst|counter[8]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 4.945      ;
+; -3.997 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.919      ;
+; -3.997 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.919      ;
+; -3.997 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.919      ;
+; -3.997 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.919      ;
+; -3.986 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.923      ;
+; -3.986 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.923      ;
+; -3.986 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.923      ;
+; -3.986 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.923      ;
+; -3.986 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.923      ;
+; -3.985 ; pwm:inst|counter[2]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.311      ; 5.291      ;
+; -3.983 ; pwm:inst|delay[1]              ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.926      ;
+; -3.983 ; pwm:inst|delay[1]              ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.926      ;
+; -3.983 ; pwm:inst|delay[1]              ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.926      ;
+; -3.983 ; pwm:inst|delay[1]              ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.926      ;
+; -3.978 ; pwm:inst|counter[3]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.311      ; 5.284      ;
+; -3.964 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.901      ;
+; -3.964 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.901      ;
+; -3.964 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.901      ;
+; -3.964 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.901      ;
+; -3.964 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.901      ;
+; -3.959 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.881      ;
+; -3.959 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.881      ;
+; -3.959 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.881      ;
+; -3.959 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 4.881      ;
+; -3.956 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.454     ; 4.497      ;
+; -3.956 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.454     ; 4.497      ;
+; -3.956 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.454     ; 4.497      ;
+; -3.956 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.454     ; 4.497      ;
+; -3.942 ; pwm:inst|delay[9]              ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.885      ;
+; -3.942 ; pwm:inst|delay[9]              ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.885      ;
+; -3.942 ; pwm:inst|delay[9]              ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.885      ;
+; -3.942 ; pwm:inst|delay[9]              ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.885      ;
+; -3.941 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.059     ; 4.877      ;
+; -3.941 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.059     ; 4.877      ;
+; -3.938 ; pwm:inst|delay[3]              ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.881      ;
+; -3.938 ; pwm:inst|delay[3]              ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.881      ;
+; -3.938 ; pwm:inst|delay[3]              ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.881      ;
+; -3.938 ; pwm:inst|delay[3]              ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.881      ;
+; -3.935 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.847      ;
+; -3.935 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.847      ;
+; -3.935 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.847      ;
+; -3.935 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.847      ;
+; -3.935 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.847      ;
+; -3.935 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.847      ;
+; -3.935 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[8]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.847      ;
+; -3.935 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[9]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.847      ;
+; -3.935 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[10]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.847      ;
+; -3.935 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.847      ;
+; -3.934 ; pwm:inst|THETA[4]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.285      ; 5.214      ;
+; -3.927 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.864      ;
+; -3.927 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.864      ;
+; -3.927 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.864      ;
+; -3.927 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.864      ;
+; -3.927 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 4.864      ;
+; -3.922 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[16]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 4.846      ;
+; -3.922 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[18]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 4.846      ;
+; -3.922 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[24]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 4.846      ;
+; -3.922 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[26]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 4.846      ;
+; -3.922 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[27]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 4.846      ;
+; -3.922 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[28]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 4.846      ;
+; -3.922 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[29]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 4.846      ;
+; -3.922 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[30]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 4.846      ;
+; -3.922 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[31]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 4.846      ;
+; -3.921 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.059     ; 4.857      ;
+; -3.921 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.059     ; 4.857      ;
+; -3.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.825      ;
+; -3.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.825      ;
+; -3.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.825      ;
+; -3.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.825      ;
+; -3.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.825      ;
+; -3.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.825      ;
+; -3.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[8]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.825      ;
+; -3.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[9]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.825      ;
+; -3.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[10]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.825      ;
+; -3.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 4.825      ;
+; -3.910 ; pwm:inst|delay[4]              ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.853      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -293,17 +293,14 @@ No paths to report.
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.343 ; pwm:inst|r[0]                  ; pwm:inst|r[0]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.077      ; 0.577      ;
-; 0.343 ; pwm:inst|r[30]                 ; pwm:inst|r[30]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.077      ; 0.577      ;
-; 0.343 ; pwm:inst|r[31]                 ; pwm:inst|r[31]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.077      ; 0.577      ;
-; 0.358 ; pwm:inst|THETA[0]              ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.357 ; pwm:inst|r[4]                  ; pwm:inst|r[4]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.577      ;
+; 0.357 ; pwm:inst|r[5]                  ; pwm:inst|r[5]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.577      ;
+; 0.357 ; pwm:inst|r[6]                  ; pwm:inst|r[6]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.577      ;
+; 0.357 ; pwm:inst|r[7]                  ; pwm:inst|r[7]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.577      ;
+; 0.358 ; pwm:inst|r[0]                  ; pwm:inst|r[0]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; pwm:inst|r[1]                  ; pwm:inst|r[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; pwm:inst|r[2]                  ; pwm:inst|r[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; pwm:inst|r[3]                  ; pwm:inst|r[3]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
-; 0.358 ; pwm:inst|r[4]                  ; pwm:inst|r[4]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
-; 0.358 ; pwm:inst|r[5]                  ; pwm:inst|r[5]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
-; 0.358 ; pwm:inst|r[6]                  ; pwm:inst|r[6]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
-; 0.358 ; pwm:inst|r[7]                  ; pwm:inst|r[7]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; pwm:inst|r[8]                  ; pwm:inst|r[8]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; pwm:inst|r[9]                  ; pwm:inst|r[9]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; pwm:inst|r[10]                 ; pwm:inst|r[10]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
@@ -326,73 +323,76 @@ No paths to report.
 ; 0.358 ; pwm:inst|r[27]                 ; pwm:inst|r[27]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; pwm:inst|r[28]                 ; pwm:inst|r[28]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; pwm:inst|r[29]                 ; pwm:inst|r[29]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
-; 0.510 ; pwm:inst|counter[31]           ; pwm:inst|counter[31]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.728      ;
-; 0.555 ; pwm:inst|THETA_TMP_COUNTER[1]  ; pwm:inst|THETA_TMP_COUNTER[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 0.788      ;
-; 0.567 ; pwm:inst|delay[15]             ; pwm:inst|delay[15]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.786      ;
+; 0.358 ; pwm:inst|r[30]                 ; pwm:inst|r[30]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; pwm:inst|r[31]                 ; pwm:inst|r[31]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.461 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.444      ; 1.062      ;
+; 0.467 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.454      ; 1.078      ;
+; 0.469 ; pwm:inst|THETA_TMP_COUNTER[20] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.454      ; 1.080      ;
+; 0.469 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.454      ; 1.080      ;
+; 0.479 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.444      ; 1.080      ;
+; 0.553 ; pwm:inst|THETA_TMP_COUNTER[29] ; pwm:inst|THETA_TMP_COUNTER[29] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.788      ;
+; 0.554 ; pwm:inst|THETA_TMP_COUNTER[17] ; pwm:inst|THETA_TMP_COUNTER[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.789      ;
+; 0.554 ; pwm:inst|THETA_TMP_COUNTER[27] ; pwm:inst|THETA_TMP_COUNTER[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.789      ;
+; 0.554 ; pwm:inst|THETA_TMP_COUNTER[31] ; pwm:inst|THETA_TMP_COUNTER[31] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.789      ;
+; 0.554 ; pwm:inst|THETA_TMP_COUNTER[21] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.789      ;
+; 0.555 ; pwm:inst|THETA_TMP_COUNTER[16] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.790      ;
+; 0.556 ; pwm:inst|THETA_TMP_COUNTER[25] ; pwm:inst|THETA_TMP_COUNTER[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.791      ;
+; 0.556 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.791      ;
+; 0.557 ; pwm:inst|THETA_TMP_COUNTER[30] ; pwm:inst|THETA_TMP_COUNTER[30] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.792      ;
+; 0.558 ; pwm:inst|THETA_TMP_COUNTER[26] ; pwm:inst|THETA_TMP_COUNTER[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.793      ;
+; 0.558 ; pwm:inst|THETA_TMP_COUNTER[28] ; pwm:inst|THETA_TMP_COUNTER[28] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.793      ;
+; 0.558 ; pwm:inst|THETA_TMP_COUNTER[24] ; pwm:inst|THETA_TMP_COUNTER[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 0.793      ;
+; 0.562 ; pwm:inst|THETA_TMP_COUNTER[19] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.454      ; 1.173      ;
+; 0.567 ; pwm:inst|THETA_TMP_COUNTER[3]  ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.787      ;
+; 0.567 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.787      ;
+; 0.567 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.787      ;
 ; 0.567 ; pwm:inst|counter[3]            ; pwm:inst|counter[3]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.786      ;
 ; 0.567 ; pwm:inst|counter[13]           ; pwm:inst|counter[13]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.786      ;
 ; 0.567 ; pwm:inst|counter[15]           ; pwm:inst|counter[15]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.786      ;
+; 0.567 ; pwm:inst|counter[19]           ; pwm:inst|counter[19]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.786      ;
+; 0.567 ; pwm:inst|counter[29]           ; pwm:inst|counter[29]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.786      ;
 ; 0.568 ; pwm:inst|delay[3]              ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
-; 0.568 ; pwm:inst|THETA_TMP_COUNTER[3]  ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
-; 0.568 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
-; 0.568 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
+; 0.568 ; pwm:inst|THETA_TMP_COUNTER[1]  ; pwm:inst|THETA_TMP_COUNTER[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.788      ;
+; 0.568 ; pwm:inst|THETA_TMP_COUNTER[5]  ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.788      ;
+; 0.568 ; pwm:inst|THETA_TMP_COUNTER[11] ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.788      ;
 ; 0.568 ; pwm:inst|counter[1]            ; pwm:inst|counter[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
 ; 0.568 ; pwm:inst|counter[5]            ; pwm:inst|counter[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
 ; 0.568 ; pwm:inst|counter[11]           ; pwm:inst|counter[11]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
-; 0.568 ; pwm:inst|counter[19]           ; pwm:inst|counter[19]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.786      ;
-; 0.568 ; pwm:inst|counter[29]           ; pwm:inst|counter[29]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.786      ;
-; 0.569 ; pwm:inst|delay[17]             ; pwm:inst|delay[17]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
-; 0.569 ; pwm:inst|delay[21]             ; pwm:inst|delay[21]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
-; 0.569 ; pwm:inst|delay[29]             ; pwm:inst|delay[29]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
+; 0.568 ; pwm:inst|counter[21]           ; pwm:inst|counter[21]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
+; 0.568 ; pwm:inst|counter[27]           ; pwm:inst|counter[27]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
+; 0.568 ; pwm:inst|counter[31]           ; pwm:inst|counter[31]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
 ; 0.569 ; pwm:inst|delay[1]              ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
 ; 0.569 ; pwm:inst|delay[5]              ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
 ; 0.569 ; pwm:inst|delay[11]             ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
-; 0.569 ; pwm:inst|THETA_TMP_COUNTER[5]  ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
-; 0.569 ; pwm:inst|THETA_TMP_COUNTER[11] ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
+; 0.569 ; pwm:inst|delay[29]             ; pwm:inst|delay[29]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
+; 0.569 ; pwm:inst|THETA_TMP_COUNTER[6]  ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.789      ;
 ; 0.569 ; pwm:inst|THETA_TMP_COUNTER[19] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
-; 0.569 ; pwm:inst|THETA_TMP_COUNTER[29] ; pwm:inst|THETA_TMP_COUNTER[29] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
 ; 0.569 ; pwm:inst|counter[6]            ; pwm:inst|counter[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
-; 0.569 ; pwm:inst|counter[17]           ; pwm:inst|counter[17]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.787      ;
-; 0.569 ; pwm:inst|counter[21]           ; pwm:inst|counter[21]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.787      ;
-; 0.569 ; pwm:inst|counter[27]           ; pwm:inst|counter[27]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.787      ;
-; 0.570 ; pwm:inst|delay[31]             ; pwm:inst|delay[31]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
+; 0.569 ; pwm:inst|counter[17]           ; pwm:inst|counter[17]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
+; 0.569 ; pwm:inst|counter[22]           ; pwm:inst|counter[22]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.788      ;
 ; 0.570 ; pwm:inst|delay[6]              ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
-; 0.570 ; pwm:inst|THETA_TMP_COUNTER[6]  ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
-; 0.570 ; pwm:inst|THETA_TMP_COUNTER[17] ; pwm:inst|THETA_TMP_COUNTER[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
-; 0.570 ; pwm:inst|THETA_TMP_COUNTER[21] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
-; 0.570 ; pwm:inst|THETA_TMP_COUNTER[27] ; pwm:inst|THETA_TMP_COUNTER[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
-; 0.570 ; pwm:inst|THETA_TMP_COUNTER[31] ; pwm:inst|THETA_TMP_COUNTER[31] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; pwm:inst|delay[27]             ; pwm:inst|delay[27]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; pwm:inst|delay[31]             ; pwm:inst|delay[31]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.790      ;
+; 0.570 ; pwm:inst|THETA_TMP_COUNTER[9]  ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.790      ;
 ; 0.570 ; pwm:inst|counter[7]            ; pwm:inst|counter[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
 ; 0.570 ; pwm:inst|counter[9]            ; pwm:inst|counter[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
-; 0.570 ; pwm:inst|counter[22]           ; pwm:inst|counter[22]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.788      ;
+; 0.570 ; pwm:inst|counter[16]           ; pwm:inst|counter[16]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.789      ;
 ; 0.571 ; pwm:inst|delay[2]              ; pwm:inst|delay[2]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
-; 0.571 ; pwm:inst|delay[7]              ; pwm:inst|delay[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
 ; 0.571 ; pwm:inst|delay[9]              ; pwm:inst|delay[9]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
-; 0.571 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
-; 0.571 ; pwm:inst|THETA_TMP_COUNTER[9]  ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
-; 0.571 ; pwm:inst|THETA_TMP_COUNTER[16] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
+; 0.571 ; pwm:inst|delay[16]             ; pwm:inst|delay[16]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
+; 0.571 ; pwm:inst|THETA_TMP_COUNTER[2]  ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.791      ;
+; 0.571 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.791      ;
+; 0.571 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.444      ; 1.172      ;
 ; 0.571 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
 ; 0.571 ; pwm:inst|counter[2]            ; pwm:inst|counter[2]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
 ; 0.571 ; pwm:inst|counter[14]           ; pwm:inst|counter[14]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
-; 0.571 ; pwm:inst|counter[16]           ; pwm:inst|counter[16]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.789      ;
-; 0.572 ; pwm:inst|delay[25]             ; pwm:inst|delay[25]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
-; 0.572 ; pwm:inst|delay[12]             ; pwm:inst|delay[12]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
-; 0.572 ; pwm:inst|THETA_TMP_COUNTER[2]  ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
-; 0.572 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
-; 0.572 ; pwm:inst|THETA_TMP_COUNTER[18] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
-; 0.572 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
-; 0.572 ; pwm:inst|THETA_TMP_COUNTER[25] ; pwm:inst|THETA_TMP_COUNTER[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
-; 0.572 ; pwm:inst|counter[4]            ; pwm:inst|counter[4]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
-; 0.572 ; pwm:inst|counter[10]           ; pwm:inst|counter[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
-; 0.572 ; pwm:inst|counter[12]           ; pwm:inst|counter[12]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
-; 0.572 ; pwm:inst|counter[18]           ; pwm:inst|counter[18]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.790      ;
-; 0.572 ; pwm:inst|counter[23]           ; pwm:inst|counter[23]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.790      ;
-; 0.572 ; pwm:inst|counter[25]           ; pwm:inst|counter[25]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 0.790      ;
-; 0.573 ; pwm:inst|delay[20]             ; pwm:inst|delay[20]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.792      ;
-; 0.573 ; pwm:inst|delay[30]             ; pwm:inst|delay[30]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.792      ;
-; 0.573 ; pwm:inst|delay[4]              ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.792      ;
-; 0.573 ; pwm:inst|THETA_TMP_COUNTER[4]  ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.792      ;
-; 0.573 ; pwm:inst|THETA_TMP_COUNTER[8]  ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.792      ;
+; 0.571 ; pwm:inst|counter[18]           ; pwm:inst|counter[18]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
+; 0.571 ; pwm:inst|counter[23]           ; pwm:inst|counter[23]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
+; 0.571 ; pwm:inst|counter[25]           ; pwm:inst|counter[25]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.790      ;
+; 0.572 ; pwm:inst|delay[4]              ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
+; 0.572 ; pwm:inst|delay[18]             ; pwm:inst|delay[18]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.791      ;
+; 0.572 ; pwm:inst|THETA_TMP_COUNTER[4]  ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.792      ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -409,7 +409,6 @@ No paths to report.
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[4]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[5]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[6]              ;
-; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[7]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA_TMP_COUNTER[0]  ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA_TMP_COUNTER[10] ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA_TMP_COUNTER[11] ;
@@ -501,6 +500,7 @@ No paths to report.
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[31]             ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[3]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[4]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[5]              ;
 +--------+--------------+----------------+------------+----------+------------+--------------------------------+
 
 
@@ -509,8 +509,8 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; GPIO_0[*]  ; CLOCK_50   ; 7.439 ; 7.416 ; Rise       ; CLOCK_50        ;
-;  GPIO_0[0] ; CLOCK_50   ; 7.439 ; 7.416 ; Rise       ; CLOCK_50        ;
+; GPIO_0[*]  ; CLOCK_50   ; 6.977 ; 6.947 ; Rise       ; CLOCK_50        ;
+;  GPIO_0[0] ; CLOCK_50   ; 6.977 ; 6.947 ; Rise       ; CLOCK_50        ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -519,8 +519,8 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; GPIO_0[*]  ; CLOCK_50   ; 7.180 ; 7.154 ; Rise       ; CLOCK_50        ;
-;  GPIO_0[0] ; CLOCK_50   ; 7.180 ; 7.154 ; Rise       ; CLOCK_50        ;
+; GPIO_0[*]  ; CLOCK_50   ; 6.736 ; 6.704 ; Rise       ; CLOCK_50        ;
+;  GPIO_0[0] ; CLOCK_50   ; 6.736 ; 6.704 ; Rise       ; CLOCK_50        ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -530,13 +530,13 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary               ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 195.2 MHz ; 195.2 MHz       ; CLOCK_50   ;      ;
-+-----------+-----------------+------------+------+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 187.58 MHz ; 187.58 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -545,7 +545,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; -4.123 ; -342.763       ;
+; CLOCK_50 ; -4.331 ; -358.748       ;
 +----------+--------+----------------+
 
 
@@ -554,7 +554,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.299 ; 0.000          ;
+; CLOCK_50 ; 0.312 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -575,116 +575,116 @@ No paths to report.
 +----------+--------+------------------------------+
 ; Clock    ; Slack  ; End Point TNS                ;
 +----------+--------+------------------------------+
-; CLOCK_50 ; -3.000 ; -140.000                     ;
+; CLOCK_50 ; -3.000 ; -139.000                     ;
 +----------+--------+------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup: 'CLOCK_50'                                                                                              ;
-+--------+---------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node           ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -4.123 ; pwm:inst|THETA[0]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.260      ; 5.378      ;
-; -3.968 ; pwm:inst|THETA[6]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.260      ; 5.223      ;
-; -3.751 ; pwm:inst|THETA[1]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.261      ; 5.007      ;
-; -3.721 ; pwm:inst|counter[1] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 4.972      ;
-; -3.681 ; pwm:inst|THETA[2]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.260      ; 4.936      ;
-; -3.650 ; pwm:inst|counter[0] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 4.901      ;
-; -3.633 ; pwm:inst|THETA[3]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.261      ; 4.889      ;
-; -3.618 ; pwm:inst|counter[3] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 4.869      ;
-; -3.551 ; pwm:inst|counter[2] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 4.802      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.526 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.380     ; 4.141      ;
-; -3.520 ; pwm:inst|counter[5] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 4.771      ;
-; -3.514 ; pwm:inst|THETA[4]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.261      ; 4.770      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.498 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.437      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.491 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.382     ; 4.104      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.468 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.056     ; 4.407      ;
-; -3.452 ; pwm:inst|counter[4] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 4.703      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.430 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.372      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.427 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.369      ;
-; -3.424 ; pwm:inst|counter[7] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 4.675      ;
-; -3.410 ; pwm:inst|r[10]      ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.352      ;
-; -3.410 ; pwm:inst|r[10]      ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.352      ;
-; -3.410 ; pwm:inst|r[10]      ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 4.352      ;
-+--------+---------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLOCK_50'                                                                                                         ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.331 ; pwm:inst|THETA[6]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 5.582      ;
+; -4.000 ; pwm:inst|THETA[0]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 5.251      ;
+; -3.940 ; pwm:inst|THETA[1]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.257      ; 5.192      ;
+; -3.766 ; pwm:inst|THETA[2]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 5.017      ;
+; -3.697 ; pwm:inst|THETA[3]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.256      ; 4.948      ;
+; -3.593 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.525      ;
+; -3.593 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.525      ;
+; -3.593 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.525      ;
+; -3.593 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.525      ;
+; -3.581 ; pwm:inst|THETA[0]              ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.067     ; 4.509      ;
+; -3.581 ; pwm:inst|THETA[0]              ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.067     ; 4.509      ;
+; -3.581 ; pwm:inst|THETA[0]              ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.067     ; 4.509      ;
+; -3.581 ; pwm:inst|THETA[0]              ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.067     ; 4.509      ;
+; -3.557 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.489      ;
+; -3.557 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.489      ;
+; -3.557 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.489      ;
+; -3.557 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.489      ;
+; -3.554 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.486      ;
+; -3.554 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.486      ;
+; -3.554 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.486      ;
+; -3.554 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.486      ;
+; -3.546 ; pwm:inst|counter[0]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.279      ; 4.820      ;
+; -3.530 ; pwm:inst|THETA[1]              ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 4.459      ;
+; -3.530 ; pwm:inst|THETA[1]              ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 4.459      ;
+; -3.530 ; pwm:inst|THETA[1]              ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 4.459      ;
+; -3.530 ; pwm:inst|THETA[1]              ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 4.459      ;
+; -3.525 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.457      ;
+; -3.525 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.457      ;
+; -3.525 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.457      ;
+; -3.525 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.457      ;
+; -3.520 ; pwm:inst|counter[1]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.279      ; 4.794      ;
+; -3.518 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.462      ;
+; -3.518 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.462      ;
+; -3.518 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.462      ;
+; -3.518 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.462      ;
+; -3.518 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.462      ;
+; -3.505 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.408     ; 4.092      ;
+; -3.505 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.408     ; 4.092      ;
+; -3.505 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.408     ; 4.092      ;
+; -3.505 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.408     ; 4.092      ;
+; -3.500 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.444      ;
+; -3.500 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.444      ;
+; -3.500 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.444      ;
+; -3.500 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.444      ;
+; -3.500 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.444      ;
+; -3.490 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.433      ;
+; -3.490 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.433      ;
+; -3.482 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.426      ;
+; -3.482 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.426      ;
+; -3.482 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.426      ;
+; -3.482 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.426      ;
+; -3.482 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.426      ;
+; -3.475 ; pwm:inst|counter[8]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.047     ; 4.423      ;
+; -3.462 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.405      ;
+; -3.462 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.405      ;
+; -3.460 ; pwm:inst|delay[1]              ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 4.410      ;
+; -3.460 ; pwm:inst|delay[1]              ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 4.410      ;
+; -3.460 ; pwm:inst|delay[1]              ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 4.410      ;
+; -3.460 ; pwm:inst|delay[1]              ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 4.410      ;
+; -3.454 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.397      ;
+; -3.454 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.052     ; 4.397      ;
+; -3.450 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.394      ;
+; -3.450 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.394      ;
+; -3.450 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.394      ;
+; -3.450 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.394      ;
+; -3.450 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 4.394      ;
+; -3.447 ; pwm:inst|counter[2]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.279      ; 4.721      ;
+; -3.446 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.369      ;
+; -3.446 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.369      ;
+; -3.446 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.369      ;
+; -3.446 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.369      ;
+; -3.446 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.369      ;
+; -3.446 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.369      ;
+; -3.446 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[8]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.369      ;
+; -3.446 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[9]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.369      ;
+; -3.446 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[10]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.369      ;
+; -3.446 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.369      ;
+; -3.445 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.368      ;
+; -3.445 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.368      ;
+; -3.445 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.368      ;
+; -3.445 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.368      ;
+; -3.445 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.368      ;
+; -3.445 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.368      ;
+; -3.445 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[8]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.368      ;
+; -3.445 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[9]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.368      ;
+; -3.445 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[10]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.368      ;
+; -3.445 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 4.368      ;
+; -3.437 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[16]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.369      ;
+; -3.437 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[18]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.369      ;
+; -3.437 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[24]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.369      ;
+; -3.437 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[26]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.369      ;
+; -3.437 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[27]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.369      ;
+; -3.437 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[28]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.369      ;
+; -3.437 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[29]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.369      ;
+; -3.437 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[30]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.369      ;
+; -3.437 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|delay[31]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.369      ;
+; -3.436 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[16]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.368      ;
+; -3.436 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[18]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.368      ;
+; -3.436 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[24]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.368      ;
+; -3.436 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[26]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 4.368      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -692,10 +692,18 @@ No paths to report.
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.299 ; pwm:inst|r[0]                  ; pwm:inst|r[0]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.068      ; 0.511      ;
-; 0.299 ; pwm:inst|r[30]                 ; pwm:inst|r[30]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.068      ; 0.511      ;
-; 0.299 ; pwm:inst|r[31]                 ; pwm:inst|r[31]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.068      ; 0.511      ;
-; 0.312 ; pwm:inst|THETA[0]              ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[0]                  ; pwm:inst|r[0]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[1]                  ; pwm:inst|r[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[2]                  ; pwm:inst|r[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[3]                  ; pwm:inst|r[3]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[4]                  ; pwm:inst|r[4]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[5]                  ; pwm:inst|r[5]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[6]                  ; pwm:inst|r[6]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[7]                  ; pwm:inst|r[7]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[8]                  ; pwm:inst|r[8]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[9]                  ; pwm:inst|r[9]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[10]                 ; pwm:inst|r[10]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; pwm:inst|r[11]                 ; pwm:inst|r[11]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.312 ; pwm:inst|r[12]                 ; pwm:inst|r[12]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.312 ; pwm:inst|r[13]                 ; pwm:inst|r[13]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.312 ; pwm:inst|r[14]                 ; pwm:inst|r[14]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
@@ -708,90 +716,82 @@ No paths to report.
 ; 0.312 ; pwm:inst|r[21]                 ; pwm:inst|r[21]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.312 ; pwm:inst|r[22]                 ; pwm:inst|r[22]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.312 ; pwm:inst|r[23]                 ; pwm:inst|r[23]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
-; 0.312 ; pwm:inst|r[24]                 ; pwm:inst|r[24]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
-; 0.312 ; pwm:inst|r[25]                 ; pwm:inst|r[25]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
-; 0.312 ; pwm:inst|r[26]                 ; pwm:inst|r[26]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
-; 0.312 ; pwm:inst|r[27]                 ; pwm:inst|r[27]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
-; 0.312 ; pwm:inst|r[28]                 ; pwm:inst|r[28]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
-; 0.312 ; pwm:inst|r[29]                 ; pwm:inst|r[29]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
-; 0.313 ; pwm:inst|r[1]                  ; pwm:inst|r[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.313 ; pwm:inst|r[2]                  ; pwm:inst|r[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.313 ; pwm:inst|r[3]                  ; pwm:inst|r[3]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.313 ; pwm:inst|r[4]                  ; pwm:inst|r[4]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.313 ; pwm:inst|r[5]                  ; pwm:inst|r[5]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.313 ; pwm:inst|r[6]                  ; pwm:inst|r[6]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.313 ; pwm:inst|r[7]                  ; pwm:inst|r[7]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.313 ; pwm:inst|r[8]                  ; pwm:inst|r[8]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.313 ; pwm:inst|r[9]                  ; pwm:inst|r[9]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.313 ; pwm:inst|r[10]                 ; pwm:inst|r[10]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.313 ; pwm:inst|r[11]                 ; pwm:inst|r[11]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
-; 0.458 ; pwm:inst|counter[31]           ; pwm:inst|counter[31]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.657      ;
-; 0.499 ; pwm:inst|THETA_TMP_COUNTER[1]  ; pwm:inst|THETA_TMP_COUNTER[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.068      ; 0.711      ;
-; 0.509 ; pwm:inst|delay[15]             ; pwm:inst|delay[15]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.708      ;
+; 0.313 ; pwm:inst|r[24]                 ; pwm:inst|r[24]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
+; 0.313 ; pwm:inst|r[25]                 ; pwm:inst|r[25]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
+; 0.313 ; pwm:inst|r[26]                 ; pwm:inst|r[26]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
+; 0.313 ; pwm:inst|r[27]                 ; pwm:inst|r[27]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
+; 0.313 ; pwm:inst|r[28]                 ; pwm:inst|r[28]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
+; 0.313 ; pwm:inst|r[29]                 ; pwm:inst|r[29]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
+; 0.313 ; pwm:inst|r[30]                 ; pwm:inst|r[30]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
+; 0.313 ; pwm:inst|r[31]                 ; pwm:inst|r[31]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.511      ;
+; 0.408 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.401      ; 0.953      ;
+; 0.409 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.408      ; 0.961      ;
+; 0.412 ; pwm:inst|THETA_TMP_COUNTER[20] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.408      ; 0.964      ;
+; 0.416 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.408      ; 0.968      ;
+; 0.424 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.401      ; 0.969      ;
+; 0.491 ; pwm:inst|THETA_TMP_COUNTER[19] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.408      ; 1.043      ;
+; 0.497 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.401      ; 1.042      ;
+; 0.497 ; pwm:inst|THETA_TMP_COUNTER[29] ; pwm:inst|THETA_TMP_COUNTER[29] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.710      ;
+; 0.498 ; pwm:inst|THETA_TMP_COUNTER[17] ; pwm:inst|THETA_TMP_COUNTER[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.711      ;
+; 0.498 ; pwm:inst|THETA_TMP_COUNTER[27] ; pwm:inst|THETA_TMP_COUNTER[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.711      ;
+; 0.498 ; pwm:inst|THETA_TMP_COUNTER[31] ; pwm:inst|THETA_TMP_COUNTER[31] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.711      ;
+; 0.498 ; pwm:inst|THETA_TMP_COUNTER[21] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.711      ;
+; 0.500 ; pwm:inst|THETA_TMP_COUNTER[16] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.713      ;
+; 0.501 ; pwm:inst|THETA_TMP_COUNTER[25] ; pwm:inst|THETA_TMP_COUNTER[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.714      ;
+; 0.501 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.714      ;
+; 0.502 ; pwm:inst|THETA_TMP_COUNTER[28] ; pwm:inst|THETA_TMP_COUNTER[28] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.715      ;
+; 0.502 ; pwm:inst|THETA_TMP_COUNTER[30] ; pwm:inst|THETA_TMP_COUNTER[30] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.715      ;
+; 0.503 ; pwm:inst|THETA_TMP_COUNTER[26] ; pwm:inst|THETA_TMP_COUNTER[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.716      ;
+; 0.503 ; pwm:inst|THETA_TMP_COUNTER[24] ; pwm:inst|THETA_TMP_COUNTER[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 0.716      ;
+; 0.504 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.401      ; 1.049      ;
+; 0.505 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.408      ; 1.057      ;
+; 0.507 ; pwm:inst|THETA_TMP_COUNTER[18] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.408      ; 1.059      ;
+; 0.508 ; pwm:inst|THETA_TMP_COUNTER[20] ; pwm:inst|THETA_TMP_COUNTER[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.408      ; 1.060      ;
+; 0.509 ; pwm:inst|THETA_TMP_COUNTER[3]  ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.709      ;
+; 0.509 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.709      ;
+; 0.509 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.709      ;
 ; 0.509 ; pwm:inst|counter[3]            ; pwm:inst|counter[3]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.708      ;
 ; 0.509 ; pwm:inst|counter[13]           ; pwm:inst|counter[13]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.708      ;
 ; 0.509 ; pwm:inst|counter[15]           ; pwm:inst|counter[15]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.708      ;
-; 0.509 ; pwm:inst|counter[19]           ; pwm:inst|counter[19]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.708      ;
 ; 0.509 ; pwm:inst|counter[29]           ; pwm:inst|counter[29]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.708      ;
-; 0.510 ; pwm:inst|delay[3]              ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
-; 0.510 ; pwm:inst|THETA_TMP_COUNTER[3]  ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
-; 0.510 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
-; 0.510 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
+; 0.510 ; pwm:inst|THETA_TMP_COUNTER[5]  ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.710      ;
+; 0.510 ; pwm:inst|THETA_TMP_COUNTER[11] ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.710      ;
 ; 0.510 ; pwm:inst|counter[5]            ; pwm:inst|counter[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
 ; 0.510 ; pwm:inst|counter[11]           ; pwm:inst|counter[11]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
+; 0.510 ; pwm:inst|counter[19]           ; pwm:inst|counter[19]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
 ; 0.510 ; pwm:inst|counter[21]           ; pwm:inst|counter[21]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
-; 0.511 ; pwm:inst|delay[21]             ; pwm:inst|delay[21]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
+; 0.510 ; pwm:inst|counter[27]           ; pwm:inst|counter[27]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
+; 0.510 ; pwm:inst|counter[31]           ; pwm:inst|counter[31]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
+; 0.511 ; pwm:inst|delay[3]              ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.709      ;
 ; 0.511 ; pwm:inst|delay[29]             ; pwm:inst|delay[29]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
-; 0.511 ; pwm:inst|delay[1]              ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
-; 0.511 ; pwm:inst|delay[5]              ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
-; 0.511 ; pwm:inst|delay[11]             ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
-; 0.511 ; pwm:inst|THETA_TMP_COUNTER[5]  ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
-; 0.511 ; pwm:inst|THETA_TMP_COUNTER[11] ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
+; 0.511 ; pwm:inst|THETA_TMP_COUNTER[1]  ; pwm:inst|THETA_TMP_COUNTER[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.711      ;
+; 0.511 ; pwm:inst|THETA_TMP_COUNTER[6]  ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.711      ;
 ; 0.511 ; pwm:inst|THETA_TMP_COUNTER[19] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
-; 0.511 ; pwm:inst|THETA_TMP_COUNTER[29] ; pwm:inst|THETA_TMP_COUNTER[29] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
 ; 0.511 ; pwm:inst|counter[1]            ; pwm:inst|counter[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
 ; 0.511 ; pwm:inst|counter[6]            ; pwm:inst|counter[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
 ; 0.511 ; pwm:inst|counter[17]           ; pwm:inst|counter[17]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
 ; 0.511 ; pwm:inst|counter[22]           ; pwm:inst|counter[22]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
-; 0.511 ; pwm:inst|counter[27]           ; pwm:inst|counter[27]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.710      ;
-; 0.512 ; pwm:inst|delay[17]             ; pwm:inst|delay[17]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.711      ;
+; 0.512 ; pwm:inst|delay[1]              ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.710      ;
+; 0.512 ; pwm:inst|delay[5]              ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.710      ;
+; 0.512 ; pwm:inst|delay[11]             ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.710      ;
+; 0.512 ; pwm:inst|delay[27]             ; pwm:inst|delay[27]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.711      ;
 ; 0.512 ; pwm:inst|delay[31]             ; pwm:inst|delay[31]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.711      ;
-; 0.512 ; pwm:inst|delay[6]              ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.711      ;
-; 0.512 ; pwm:inst|THETA_TMP_COUNTER[6]  ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.711      ;
-; 0.512 ; pwm:inst|THETA_TMP_COUNTER[17] ; pwm:inst|THETA_TMP_COUNTER[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.711      ;
-; 0.512 ; pwm:inst|THETA_TMP_COUNTER[21] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.711      ;
-; 0.512 ; pwm:inst|THETA_TMP_COUNTER[27] ; pwm:inst|THETA_TMP_COUNTER[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.711      ;
-; 0.512 ; pwm:inst|THETA_TMP_COUNTER[31] ; pwm:inst|THETA_TMP_COUNTER[31] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.711      ;
+; 0.512 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.408      ; 1.064      ;
+; 0.513 ; pwm:inst|delay[6]              ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 0.711      ;
+; 0.513 ; pwm:inst|delay[16]             ; pwm:inst|delay[16]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.712      ;
+; 0.513 ; pwm:inst|THETA_TMP_COUNTER[2]  ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.713      ;
+; 0.513 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.713      ;
+; 0.513 ; pwm:inst|THETA_TMP_COUNTER[9]  ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.713      ;
+; 0.513 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.713      ;
 ; 0.513 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.712      ;
-; 0.513 ; pwm:inst|counter[2]            ; pwm:inst|counter[2]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.712      ;
 ; 0.513 ; pwm:inst|counter[7]            ; pwm:inst|counter[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.712      ;
 ; 0.513 ; pwm:inst|counter[9]            ; pwm:inst|counter[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.712      ;
 ; 0.513 ; pwm:inst|counter[14]           ; pwm:inst|counter[14]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.712      ;
 ; 0.513 ; pwm:inst|counter[16]           ; pwm:inst|counter[16]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.712      ;
 ; 0.513 ; pwm:inst|counter[23]           ; pwm:inst|counter[23]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.712      ;
 ; 0.513 ; pwm:inst|counter[25]           ; pwm:inst|counter[25]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.712      ;
-; 0.514 ; pwm:inst|delay[25]             ; pwm:inst|delay[25]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|delay[2]              ; pwm:inst|delay[2]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|delay[7]              ; pwm:inst|delay[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|delay[9]              ; pwm:inst|delay[9]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|THETA_TMP_COUNTER[2]  ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|THETA_TMP_COUNTER[9]  ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|THETA_TMP_COUNTER[16] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|counter[12]           ; pwm:inst|counter[12]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|counter[18]           ; pwm:inst|counter[18]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.514 ; pwm:inst|counter[30]           ; pwm:inst|counter[30]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.713      ;
-; 0.515 ; pwm:inst|delay[4]              ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.714      ;
-; 0.515 ; pwm:inst|delay[12]             ; pwm:inst|delay[12]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.714      ;
-; 0.515 ; pwm:inst|THETA_TMP_COUNTER[4]  ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.714      ;
-; 0.515 ; pwm:inst|THETA_TMP_COUNTER[12] ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.714      ;
-; 0.515 ; pwm:inst|THETA_TMP_COUNTER[18] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.714      ;
-; 0.515 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.714      ;
-; 0.515 ; pwm:inst|THETA_TMP_COUNTER[25] ; pwm:inst|THETA_TMP_COUNTER[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.714      ;
-; 0.515 ; pwm:inst|counter[4]            ; pwm:inst|counter[4]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.714      ;
-; 0.515 ; pwm:inst|counter[10]           ; pwm:inst|counter[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.714      ;
-; 0.515 ; pwm:inst|counter[20]           ; pwm:inst|counter[20]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.714      ;
+; 0.513 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.401      ; 1.058      ;
+; 0.514 ; pwm:inst|THETA_TMP_COUNTER[4]  ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 0.714      ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -808,7 +808,6 @@ No paths to report.
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[4]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[5]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[6]              ;
-; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[7]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA_TMP_COUNTER[0]  ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA_TMP_COUNTER[10] ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA_TMP_COUNTER[11] ;
@@ -900,6 +899,7 @@ No paths to report.
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[31]             ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[3]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[4]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[5]              ;
 +--------+--------------+----------------+------------+----------+------------+--------------------------------+
 
 
@@ -908,8 +908,8 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; GPIO_0[*]  ; CLOCK_50   ; 6.753 ; 6.634 ; Rise       ; CLOCK_50        ;
-;  GPIO_0[0] ; CLOCK_50   ; 6.753 ; 6.634 ; Rise       ; CLOCK_50        ;
+; GPIO_0[*]  ; CLOCK_50   ; 6.320 ; 6.225 ; Rise       ; CLOCK_50        ;
+;  GPIO_0[0] ; CLOCK_50   ; 6.320 ; 6.225 ; Rise       ; CLOCK_50        ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -918,8 +918,8 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; GPIO_0[*]  ; CLOCK_50   ; 6.506 ; 6.389 ; Rise       ; CLOCK_50        ;
-;  GPIO_0[0] ; CLOCK_50   ; 6.506 ; 6.389 ; Rise       ; CLOCK_50        ;
+; GPIO_0[*]  ; CLOCK_50   ; 6.092 ; 5.997 ; Rise       ; CLOCK_50        ;
+;  GPIO_0[0] ; CLOCK_50   ; 6.092 ; 5.997 ; Rise       ; CLOCK_50        ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -934,7 +934,7 @@ No synchronizer chains to report.
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; -2.245 ; -167.385       ;
+; CLOCK_50 ; -2.308 ; -183.651       ;
 +----------+--------+----------------+
 
 
@@ -943,7 +943,7 @@ No synchronizer chains to report.
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.179 ; 0.000          ;
+; CLOCK_50 ; 0.186 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -964,116 +964,116 @@ No paths to report.
 +----------+--------+------------------------------+
 ; Clock    ; Slack  ; End Point TNS                ;
 +----------+--------+------------------------------+
-; CLOCK_50 ; -3.000 ; -178.288                     ;
+; CLOCK_50 ; -3.000 ; -177.510                     ;
 +----------+--------+------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup: 'CLOCK_50'                                                                                              ;
-+--------+---------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node           ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -2.245 ; pwm:inst|THETA[0]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.154      ; 3.386      ;
-; -2.127 ; pwm:inst|THETA[6]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.154      ; 3.268      ;
-; -2.040 ; pwm:inst|counter[1] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.152      ; 3.179      ;
-; -2.036 ; pwm:inst|THETA[1]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.155      ; 3.178      ;
-; -1.992 ; pwm:inst|counter[0] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.152      ; 3.131      ;
-; -1.971 ; pwm:inst|THETA[2]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.154      ; 3.112      ;
-; -1.970 ; pwm:inst|counter[3] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.152      ; 3.109      ;
-; -1.960 ; pwm:inst|THETA[3]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.155      ; 3.102      ;
-; -1.925 ; pwm:inst|counter[2] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.152      ; 3.064      ;
-; -1.901 ; pwm:inst|counter[5] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.152      ; 3.040      ;
-; -1.857 ; pwm:inst|counter[4] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.152      ; 2.996      ;
-; -1.839 ; pwm:inst|THETA[4]   ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.155      ; 2.981      ;
-; -1.837 ; pwm:inst|counter[7] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.152      ; 2.976      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.835 ; pwm:inst|delay[1]   ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.785      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.824 ; pwm:inst|r[0]       ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.231     ; 2.580      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.816 ; pwm:inst|delay[3]   ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.037     ; 2.766      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.809 ; pwm:inst|delay[0]   ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.234     ; 2.562      ;
-; -1.802 ; pwm:inst|counter[8] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.151      ; 2.940      ;
-; -1.788 ; pwm:inst|counter[6] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.152      ; 2.927      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.778 ; pwm:inst|r[1]       ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.731      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.773 ; pwm:inst|r[2]       ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.726      ;
-; -1.769 ; pwm:inst|counter[9] ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.152      ; 2.908      ;
-+--------+---------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLOCK_50'                                                                                                         ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.308 ; pwm:inst|THETA[6]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.150      ; 3.445      ;
+; -2.102 ; pwm:inst|THETA[0]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.150      ; 3.239      ;
+; -2.078 ; pwm:inst|THETA[1]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.150      ; 3.215      ;
+; -1.997 ; pwm:inst|THETA[2]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.150      ; 3.134      ;
+; -1.949 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.902      ;
+; -1.949 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.902      ;
+; -1.949 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.902      ;
+; -1.949 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.902      ;
+; -1.949 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.902      ;
+; -1.929 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.882      ;
+; -1.929 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.882      ;
+; -1.929 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.882      ;
+; -1.929 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.882      ;
+; -1.929 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.882      ;
+; -1.924 ; pwm:inst|counter[1]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.167      ; 3.078      ;
+; -1.922 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.875      ;
+; -1.922 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.875      ;
+; -1.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.858      ;
+; -1.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.858      ;
+; -1.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.858      ;
+; -1.913 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.858      ;
+; -1.913 ; pwm:inst|THETA[3]              ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.150      ; 3.050      ;
+; -1.910 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.863      ;
+; -1.910 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.863      ;
+; -1.910 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.863      ;
+; -1.910 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.863      ;
+; -1.910 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.863      ;
+; -1.910 ; pwm:inst|counter[0]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.167      ; 3.064      ;
+; -1.902 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.855      ;
+; -1.902 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.855      ;
+; -1.900 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.838      ;
+; -1.900 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.838      ;
+; -1.900 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.838      ;
+; -1.900 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.838      ;
+; -1.900 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.838      ;
+; -1.900 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.838      ;
+; -1.900 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[8]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.838      ;
+; -1.900 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[9]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.838      ;
+; -1.900 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[10]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.838      ;
+; -1.900 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.838      ;
+; -1.893 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.838      ;
+; -1.893 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.838      ;
+; -1.893 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.838      ;
+; -1.893 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.838      ;
+; -1.892 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[16]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.837      ;
+; -1.892 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[18]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.837      ;
+; -1.892 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[24]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.837      ;
+; -1.892 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[26]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.837      ;
+; -1.892 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[27]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.837      ;
+; -1.892 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[28]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.837      ;
+; -1.892 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[29]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.837      ;
+; -1.892 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[30]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.837      ;
+; -1.892 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|delay[31]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.837      ;
+; -1.889 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.842      ;
+; -1.889 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.842      ;
+; -1.889 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.842      ;
+; -1.889 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.842      ;
+; -1.889 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.842      ;
+; -1.883 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.836      ;
+; -1.883 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.836      ;
+; -1.880 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.818      ;
+; -1.880 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.818      ;
+; -1.880 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.818      ;
+; -1.880 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.818      ;
+; -1.880 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.818      ;
+; -1.880 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.818      ;
+; -1.880 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[8]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.818      ;
+; -1.880 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[9]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.818      ;
+; -1.880 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[10]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.818      ;
+; -1.880 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.818      ;
+; -1.874 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.819      ;
+; -1.874 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.819      ;
+; -1.874 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.819      ;
+; -1.874 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.819      ;
+; -1.872 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[16]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.817      ;
+; -1.872 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[18]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.817      ;
+; -1.872 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[24]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.817      ;
+; -1.872 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[26]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.817      ;
+; -1.872 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[27]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.817      ;
+; -1.872 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[28]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.817      ;
+; -1.872 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[29]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.817      ;
+; -1.872 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[30]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.817      ;
+; -1.872 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|delay[31]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.817      ;
+; -1.862 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.815      ;
+; -1.862 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 2.815      ;
+; -1.861 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.799      ;
+; -1.861 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|delay[2]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.799      ;
+; -1.861 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.799      ;
+; -1.861 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.799      ;
+; -1.861 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.799      ;
+; -1.861 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.799      ;
+; -1.861 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|delay[8]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.799      ;
+; -1.861 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|delay[9]              ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.799      ;
+; -1.861 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|delay[10]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.799      ;
+; -1.861 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 2.799      ;
+; -1.854 ; pwm:inst|counter[3]            ; pwm:inst|pwm                   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.167      ; 3.008      ;
+; -1.853 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.798      ;
+; -1.853 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.798      ;
+; -1.853 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.798      ;
+; -1.853 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 2.798      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1081,17 +1081,22 @@ No paths to report.
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.179 ; pwm:inst|r[0]                  ; pwm:inst|r[0]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; pwm:inst|r[30]                 ; pwm:inst|r[30]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; pwm:inst|r[31]                 ; pwm:inst|r[31]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.044      ; 0.307      ;
-; 0.187 ; pwm:inst|THETA[0]              ; pwm:inst|THETA[0]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
+; 0.186 ; pwm:inst|r[4]                  ; pwm:inst|r[4]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[5]                  ; pwm:inst|r[5]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[6]                  ; pwm:inst|r[6]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[7]                  ; pwm:inst|r[7]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[16]                 ; pwm:inst|r[16]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[17]                 ; pwm:inst|r[17]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[18]                 ; pwm:inst|r[18]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[19]                 ; pwm:inst|r[19]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[20]                 ; pwm:inst|r[20]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[21]                 ; pwm:inst|r[21]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[22]                 ; pwm:inst|r[22]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; pwm:inst|r[23]                 ; pwm:inst|r[23]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.187 ; pwm:inst|r[0]                  ; pwm:inst|r[0]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[1]                  ; pwm:inst|r[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[2]                  ; pwm:inst|r[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[3]                  ; pwm:inst|r[3]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[4]                  ; pwm:inst|r[4]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[5]                  ; pwm:inst|r[5]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[6]                  ; pwm:inst|r[6]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[7]                  ; pwm:inst|r[7]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[8]                  ; pwm:inst|r[8]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[9]                  ; pwm:inst|r[9]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[10]                 ; pwm:inst|r[10]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
@@ -1100,38 +1105,52 @@ No paths to report.
 ; 0.187 ; pwm:inst|r[13]                 ; pwm:inst|r[13]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[14]                 ; pwm:inst|r[14]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[15]                 ; pwm:inst|r[15]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[16]                 ; pwm:inst|r[16]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[17]                 ; pwm:inst|r[17]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[18]                 ; pwm:inst|r[18]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[19]                 ; pwm:inst|r[19]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[20]                 ; pwm:inst|r[20]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[21]                 ; pwm:inst|r[21]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[22]                 ; pwm:inst|r[22]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; pwm:inst|r[23]                 ; pwm:inst|r[23]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[24]                 ; pwm:inst|r[24]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[25]                 ; pwm:inst|r[25]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[26]                 ; pwm:inst|r[26]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[27]                 ; pwm:inst|r[27]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[28]                 ; pwm:inst|r[28]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; pwm:inst|r[29]                 ; pwm:inst|r[29]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
-; 0.264 ; pwm:inst|counter[31]           ; pwm:inst|counter[31]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.384      ;
-; 0.297 ; pwm:inst|THETA_TMP_COUNTER[1]  ; pwm:inst|THETA_TMP_COUNTER[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.044      ; 0.425      ;
-; 0.302 ; pwm:inst|delay[15]             ; pwm:inst|delay[15]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.423      ;
+; 0.187 ; pwm:inst|r[30]                 ; pwm:inst|r[30]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; pwm:inst|r[31]                 ; pwm:inst|r[31]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
+; 0.248 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.240      ; 0.572      ;
+; 0.255 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.245      ; 0.584      ;
+; 0.256 ; pwm:inst|THETA_TMP_COUNTER[20] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.245      ; 0.585      ;
+; 0.258 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.245      ; 0.587      ;
+; 0.263 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.240      ; 0.587      ;
+; 0.295 ; pwm:inst|THETA_TMP_COUNTER[31] ; pwm:inst|THETA_TMP_COUNTER[31] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.424      ;
+; 0.296 ; pwm:inst|THETA_TMP_COUNTER[17] ; pwm:inst|THETA_TMP_COUNTER[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.425      ;
+; 0.296 ; pwm:inst|THETA_TMP_COUNTER[27] ; pwm:inst|THETA_TMP_COUNTER[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.425      ;
+; 0.296 ; pwm:inst|THETA_TMP_COUNTER[29] ; pwm:inst|THETA_TMP_COUNTER[29] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.425      ;
+; 0.296 ; pwm:inst|THETA_TMP_COUNTER[21] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.425      ;
+; 0.297 ; pwm:inst|THETA_TMP_COUNTER[25] ; pwm:inst|THETA_TMP_COUNTER[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.426      ;
+; 0.297 ; pwm:inst|THETA_TMP_COUNTER[16] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.426      ;
+; 0.297 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.426      ;
+; 0.298 ; pwm:inst|THETA_TMP_COUNTER[30] ; pwm:inst|THETA_TMP_COUNTER[30] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.427      ;
+; 0.298 ; pwm:inst|THETA_TMP_COUNTER[24] ; pwm:inst|THETA_TMP_COUNTER[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.427      ;
+; 0.299 ; pwm:inst|THETA_TMP_COUNTER[26] ; pwm:inst|THETA_TMP_COUNTER[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.428      ;
+; 0.299 ; pwm:inst|THETA_TMP_COUNTER[28] ; pwm:inst|THETA_TMP_COUNTER[28] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.428      ;
+; 0.302 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.423      ;
 ; 0.303 ; pwm:inst|delay[1]              ; pwm:inst|delay[1]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.424      ;
 ; 0.303 ; pwm:inst|delay[3]              ; pwm:inst|delay[3]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.424      ;
 ; 0.303 ; pwm:inst|delay[5]              ; pwm:inst|delay[5]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.424      ;
 ; 0.303 ; pwm:inst|delay[11]             ; pwm:inst|delay[11]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.424      ;
-; 0.303 ; pwm:inst|THETA_TMP_COUNTER[15] ; pwm:inst|THETA_TMP_COUNTER[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.423      ;
+; 0.303 ; pwm:inst|delay[31]             ; pwm:inst|delay[31]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.424      ;
+; 0.303 ; pwm:inst|THETA_TMP_COUNTER[3]  ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.424      ;
+; 0.303 ; pwm:inst|THETA_TMP_COUNTER[5]  ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.424      ;
+; 0.303 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.424      ;
 ; 0.303 ; pwm:inst|counter[13]           ; pwm:inst|counter[13]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.423      ;
 ; 0.303 ; pwm:inst|counter[15]           ; pwm:inst|counter[15]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.423      ;
-; 0.304 ; pwm:inst|delay[31]             ; pwm:inst|delay[31]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
+; 0.303 ; pwm:inst|counter[31]           ; pwm:inst|counter[31]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.423      ;
 ; 0.304 ; pwm:inst|delay[6]              ; pwm:inst|delay[6]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.425      ;
-; 0.304 ; pwm:inst|delay[7]              ; pwm:inst|delay[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.425      ;
 ; 0.304 ; pwm:inst|delay[9]              ; pwm:inst|delay[9]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.425      ;
-; 0.304 ; pwm:inst|THETA_TMP_COUNTER[3]  ; pwm:inst|THETA_TMP_COUNTER[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
-; 0.304 ; pwm:inst|THETA_TMP_COUNTER[5]  ; pwm:inst|THETA_TMP_COUNTER[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
-; 0.304 ; pwm:inst|THETA_TMP_COUNTER[13] ; pwm:inst|THETA_TMP_COUNTER[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
-; 0.304 ; pwm:inst|THETA_TMP_COUNTER[31] ; pwm:inst|THETA_TMP_COUNTER[31] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; pwm:inst|delay[16]             ; pwm:inst|delay[16]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwm:inst|delay[27]             ; pwm:inst|delay[27]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwm:inst|delay[29]             ; pwm:inst|delay[29]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwm:inst|THETA_TMP_COUNTER[1]  ; pwm:inst|THETA_TMP_COUNTER[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwm:inst|THETA_TMP_COUNTER[6]  ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwm:inst|THETA_TMP_COUNTER[11] ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.425      ;
 ; 0.304 ; pwm:inst|counter[1]            ; pwm:inst|counter[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
 ; 0.304 ; pwm:inst|counter[3]            ; pwm:inst|counter[3]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
 ; 0.304 ; pwm:inst|counter[5]            ; pwm:inst|counter[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
@@ -1141,20 +1160,15 @@ No paths to report.
 ; 0.304 ; pwm:inst|counter[21]           ; pwm:inst|counter[21]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
 ; 0.304 ; pwm:inst|counter[27]           ; pwm:inst|counter[27]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
 ; 0.304 ; pwm:inst|counter[29]           ; pwm:inst|counter[29]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.424      ;
-; 0.305 ; pwm:inst|delay[17]             ; pwm:inst|delay[17]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwm:inst|delay[21]             ; pwm:inst|delay[21]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwm:inst|delay[29]             ; pwm:inst|delay[29]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; pwm:inst|delay[2]              ; pwm:inst|delay[2]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.426      ;
 ; 0.305 ; pwm:inst|delay[4]              ; pwm:inst|delay[4]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.426      ;
-; 0.305 ; pwm:inst|THETA_TMP_COUNTER[6]  ; pwm:inst|THETA_TMP_COUNTER[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwm:inst|THETA_TMP_COUNTER[7]  ; pwm:inst|THETA_TMP_COUNTER[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwm:inst|THETA_TMP_COUNTER[11] ; pwm:inst|THETA_TMP_COUNTER[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwm:inst|THETA_TMP_COUNTER[17] ; pwm:inst|THETA_TMP_COUNTER[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; pwm:inst|delay[8]              ; pwm:inst|delay[8]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwm:inst|delay[18]             ; pwm:inst|delay[18]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwm:inst|THETA_TMP_COUNTER[2]  ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwm:inst|THETA_TMP_COUNTER[8]  ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwm:inst|THETA_TMP_COUNTER[9]  ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.426      ;
 ; 0.305 ; pwm:inst|THETA_TMP_COUNTER[19] ; pwm:inst|THETA_TMP_COUNTER[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwm:inst|THETA_TMP_COUNTER[21] ; pwm:inst|THETA_TMP_COUNTER[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwm:inst|THETA_TMP_COUNTER[27] ; pwm:inst|THETA_TMP_COUNTER[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwm:inst|THETA_TMP_COUNTER[29] ; pwm:inst|THETA_TMP_COUNTER[29] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwm:inst|counter[2]            ; pwm:inst|counter[2]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; pwm:inst|counter[6]            ; pwm:inst|counter[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; pwm:inst|counter[7]            ; pwm:inst|counter[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; pwm:inst|counter[9]            ; pwm:inst|counter[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
@@ -1163,24 +1177,10 @@ No paths to report.
 ; 0.305 ; pwm:inst|counter[22]           ; pwm:inst|counter[22]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; pwm:inst|counter[23]           ; pwm:inst|counter[23]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
 ; 0.305 ; pwm:inst|counter[25]           ; pwm:inst|counter[25]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.425      ;
-; 0.306 ; pwm:inst|delay[25]             ; pwm:inst|delay[25]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|delay[12]             ; pwm:inst|delay[12]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.427      ;
-; 0.306 ; pwm:inst|THETA_TMP_COUNTER[2]  ; pwm:inst|THETA_TMP_COUNTER[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|THETA_TMP_COUNTER[8]  ; pwm:inst|THETA_TMP_COUNTER[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|THETA_TMP_COUNTER[9]  ; pwm:inst|THETA_TMP_COUNTER[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|THETA_TMP_COUNTER[14] ; pwm:inst|THETA_TMP_COUNTER[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|THETA_TMP_COUNTER[16] ; pwm:inst|THETA_TMP_COUNTER[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|THETA_TMP_COUNTER[22] ; pwm:inst|THETA_TMP_COUNTER[22] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|THETA_TMP_COUNTER[23] ; pwm:inst|THETA_TMP_COUNTER[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|THETA_TMP_COUNTER[25] ; pwm:inst|THETA_TMP_COUNTER[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|counter[4]            ; pwm:inst|counter[4]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|counter[10]           ; pwm:inst|counter[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|counter[12]           ; pwm:inst|counter[12]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|counter[18]           ; pwm:inst|counter[18]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|counter[20]           ; pwm:inst|counter[20]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|counter[24]           ; pwm:inst|counter[24]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|counter[28]           ; pwm:inst|counter[28]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwm:inst|counter[30]           ; pwm:inst|counter[30]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; pwm:inst|delay[10]             ; pwm:inst|delay[10]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; pwm:inst|delay[24]             ; pwm:inst|delay[24]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; pwm:inst|delay[30]             ; pwm:inst|delay[30]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; pwm:inst|THETA_TMP_COUNTER[4]  ; pwm:inst|THETA_TMP_COUNTER[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.427      ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -1197,7 +1197,6 @@ No paths to report.
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[4]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[5]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[6]              ;
-; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA[7]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA_TMP_COUNTER[0]  ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA_TMP_COUNTER[10] ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|THETA_TMP_COUNTER[11] ;
@@ -1289,6 +1288,7 @@ No paths to report.
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[31]             ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[3]              ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[4]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period ; CLOCK_50 ; Rise       ; pwm:inst|delay[5]              ;
 +--------+--------------+----------------+------------+----------+------------+--------------------------------+
 
 
@@ -1297,8 +1297,8 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; GPIO_0[*]  ; CLOCK_50   ; 4.296 ; 4.402 ; Rise       ; CLOCK_50        ;
-;  GPIO_0[0] ; CLOCK_50   ; 4.296 ; 4.402 ; Rise       ; CLOCK_50        ;
+; GPIO_0[*]  ; CLOCK_50   ; 4.046 ; 4.123 ; Rise       ; CLOCK_50        ;
+;  GPIO_0[0] ; CLOCK_50   ; 4.046 ; 4.123 ; Rise       ; CLOCK_50        ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1307,8 +1307,8 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; GPIO_0[*]  ; CLOCK_50   ; 4.145 ; 4.245 ; Rise       ; CLOCK_50        ;
-;  GPIO_0[0] ; CLOCK_50   ; 4.145 ; 4.245 ; Rise       ; CLOCK_50        ;
+; GPIO_0[*]  ; CLOCK_50   ; 3.904 ; 3.976 ; Rise       ; CLOCK_50        ;
+;  GPIO_0[0] ; CLOCK_50   ; 3.904 ; 3.976 ; Rise       ; CLOCK_50        ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1323,10 +1323,10 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -4.769   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
-;  CLOCK_50        ; -4.769   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -397.534 ; 0.0   ; 0.0      ; 0.0     ; -178.288            ;
-;  CLOCK_50        ; -397.534 ; 0.000 ; N/A      ; N/A     ; -178.288            ;
+; Worst-case Slack ; -4.968   ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+;  CLOCK_50        ; -4.968   ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -414.75  ; 0.0   ; 0.0      ; 0.0     ; -177.51             ;
+;  CLOCK_50        ; -414.750 ; 0.000 ; N/A      ; N/A     ; -177.510            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -1335,8 +1335,8 @@ No synchronizer chains to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; GPIO_0[*]  ; CLOCK_50   ; 7.439 ; 7.416 ; Rise       ; CLOCK_50        ;
-;  GPIO_0[0] ; CLOCK_50   ; 7.439 ; 7.416 ; Rise       ; CLOCK_50        ;
+; GPIO_0[*]  ; CLOCK_50   ; 6.977 ; 6.947 ; Rise       ; CLOCK_50        ;
+;  GPIO_0[0] ; CLOCK_50   ; 6.977 ; 6.947 ; Rise       ; CLOCK_50        ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1345,8 +1345,8 @@ No synchronizer chains to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; GPIO_0[*]  ; CLOCK_50   ; 4.145 ; 4.245 ; Rise       ; CLOCK_50        ;
-;  GPIO_0[0] ; CLOCK_50   ; 4.145 ; 4.245 ; Rise       ; CLOCK_50        ;
+; GPIO_0[*]  ; CLOCK_50   ; 3.904 ; 3.976 ; Rise       ; CLOCK_50        ;
+;  GPIO_0[0] ; CLOCK_50   ; 3.904 ; 3.976 ; Rise       ; CLOCK_50        ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1400,7 +1400,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 14075    ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 14172    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1410,7 +1410,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 14075    ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 14172    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1447,7 +1447,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Tue Jul 28 23:11:54 2015
+    Info: Processing started: Wed Jul 29 23:10:38 2015
 Info: Command: quartus_sta test -c test
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1464,63 +1464,63 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.769
+Info (332146): Worst-case setup slack is -4.968
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -4.769      -397.534 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.343
+    Info (332119):    -4.968      -414.750 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.357
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.343         0.000 CLOCK_50 
+    Info (332119):     0.357         0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -3.000      -140.000 CLOCK_50 
+    Info (332119):    -3.000      -139.000 CLOCK_50 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.123
+Info (332146): Worst-case setup slack is -4.331
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -4.123      -342.763 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.299
+    Info (332119):    -4.331      -358.748 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.312
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.299         0.000 CLOCK_50 
+    Info (332119):     0.312         0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -3.000      -140.000 CLOCK_50 
+    Info (332119):    -3.000      -139.000 CLOCK_50 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.245
+Info (332146): Worst-case setup slack is -2.308
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -2.245      -167.385 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.179
+    Info (332119):    -2.308      -183.651 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.186
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.179         0.000 CLOCK_50 
+    Info (332119):     0.186         0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -3.000      -178.288 CLOCK_50 
+    Info (332119):    -3.000      -177.510 CLOCK_50 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 474 megabytes
-    Info: Processing ended: Tue Jul 28 23:12:00 2015
+    Info: Peak virtual memory: 480 megabytes
+    Info: Processing ended: Wed Jul 29 23:10:44 2015
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 

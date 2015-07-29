@@ -7,10 +7,10 @@ module  pwm(
 	
 	integer counter;
 	integer dut;
-	integer div = 5000000;
+	integer div = 500000; // slow down the clock 
 	integer r = 0;
 	integer delay = 0;
-	integer THETA_TMP_COUNTER;
+	integer THETA_TMP_COUNTER = 0;
 	//integer x;
 	
 	reg  [7:0] THETA = 8'd0;
@@ -25,10 +25,10 @@ always @(posedge clk) begin
 
 
     if(r == div ) begin
-       THETA <= (THETA + 8'b1) % 8'd255; // theta_a is flopped theat 0 to 255  
-        r <= 1;
+       THETA = (THETA + 8'b1) % 8'd128; // theta_a is flopped theat 0 to 255  
+        r = 1;
 		  
-		  		   //adding delay here 	 
+		  	//adding delay here 	 
 			if(THETA == 8'd0) begin
 				THETA_TMP_COUNTER = THETA_TMP_COUNTER + 1;
 			end
@@ -46,21 +46,24 @@ always @(posedge clk) begin
     else begin
         
 		  
-		  	if(THETA_TMP_COUNTER == 2) begin
-				//div = 40;
-			   THETA = 9'd0;
-				if(delay == 500000000) begin
+		  	if(THETA_TMP_COUNTER == 1) begin
+				
+			   THETA = 8'd0;
+				 
+				if(delay == 50000000) begin
 					 THETA_TMP_COUNTER = 0;
 					 delay = 0;
 				end
 				else begin 
 					delay = delay + 1;
+					THETA = 8'd0;
 				end 
 					 
 			end
 			
 			else begin
-				r <= r + 1;
+				r = r + 1;
+				
 			end
 		  
 		  
@@ -184,4 +187,4 @@ always @(THETA) begin
 end
 
 	
-endmodule 
+endmodule
