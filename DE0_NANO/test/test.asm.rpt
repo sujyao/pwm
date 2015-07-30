@@ -1,5 +1,5 @@
 Assembler report for test
-Wed Jul 29 23:10:37 2015
+Fri Jul 31 09:46:05 2015
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -9,9 +9,10 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   1. Legal Notice
   2. Assembler Summary
   3. Assembler Settings
-  4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/test.sof
-  6. Assembler Messages
+  4. Assembler Encrypted IP Cores Summary
+  5. Assembler Generated Files
+  6. Assembler Device Options: C:/Users/DELL/Documents/FPGA readings/Tools/DE0_Nano_SystemBuilder/CodeGenerated/DE0_NANO/test/test.sof
+  7. Assembler Messages
 
 
 
@@ -37,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jul 29 23:10:37 2015 ;
+; Assembler Status      ; Successful - Fri Jul 31 09:46:05 2015 ;
 ; Revision Name         ; test                                  ;
 ; Top-level Entity Name ; test                                  ;
 ; Family                ; Cyclone IV E                          ;
@@ -77,6 +78,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
++------------------------------------------------+
+; Assembler Encrypted IP Cores Summary           ;
++--------+------------------------+--------------+
+; Vendor ; IP Core Name           ; License Type ;
++--------+------------------------+--------------+
+; Altera ; Signal Tap (6AF7 BCE1) ; Licensed     ;
+; Altera ; Signal Tap (6AF7 BCEC) ; Licensed     ;
++--------+------------------------+--------------+
+
+
 +---------------------------------------------------------------------------------------------------------+
 ; Assembler Generated Files                                                                               ;
 +---------------------------------------------------------------------------------------------------------+
@@ -92,8 +103,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                          ;
 +----------------+------------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP4CE22F17C6                                                                                                     ;
-; JTAG usercode  ; 0x0015A954                                                                                                       ;
-; Checksum       ; 0x0015A954                                                                                                       ;
+; JTAG usercode  ; 0x001C9069                                                                                                       ;
+; Checksum       ; 0x001C9069                                                                                                       ;
 +----------------+------------------------------------------------------------------------------------------------------------------+
 
 
@@ -103,14 +114,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Wed Jul 29 23:10:34 2015
+    Info: Processing started: Fri Jul 31 09:46:01 2015
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off test -c test
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 404 megabytes
-    Info: Processing ended: Wed Jul 29 23:10:37 2015
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 457 megabytes
+    Info: Processing ended: Fri Jul 31 09:46:05 2015
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 
