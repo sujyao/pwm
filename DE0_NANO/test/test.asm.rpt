@@ -1,5 +1,5 @@
 Assembler report for test
-Fri Jul 31 09:46:05 2015
+Sat Aug 01 17:18:55 2015
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Jul 31 09:46:05 2015 ;
+; Assembler Status      ; Successful - Sat Aug 01 17:18:55 2015 ;
 ; Revision Name         ; test                                  ;
 ; Top-level Entity Name ; test                                  ;
 ; Family                ; Cyclone IV E                          ;
@@ -103,8 +103,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                          ;
 +----------------+------------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP4CE22F17C6                                                                                                     ;
-; JTAG usercode  ; 0x001C9069                                                                                                       ;
-; Checksum       ; 0x001C9069                                                                                                       ;
+; JTAG usercode  ; 0x001A4B9F                                                                                                       ;
+; Checksum       ; 0x001A4B9F                                                                                                       ;
 +----------------+------------------------------------------------------------------------------------------------------------------+
 
 
@@ -114,14 +114,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Fri Jul 31 09:46:01 2015
+    Info: Processing started: Sat Aug 01 17:18:50 2015
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off test -c test
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 457 megabytes
-    Info: Processing ended: Fri Jul 31 09:46:05 2015
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 449 megabytes
+    Info: Processing ended: Sat Aug 01 17:18:55 2015
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 
