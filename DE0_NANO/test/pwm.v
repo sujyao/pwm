@@ -46,13 +46,10 @@ always @(posedge clk) begin
 			   THETA = 10'd0;
 		
 				if(delay == 500000000) begin
-					 THETA_TMP_COUNTER = 0;
 					 delay = 0;
 				end
 				else begin 
 					delay = delay + 1;
-					//pwm = 1'b1;
-					//SINE_OUT	 =	13'd0;
 				end 		 
 			end	
 			else begin
@@ -74,14 +71,24 @@ always @(posedge clk) begin
 		pwm = pwm;
 	end
 	
+	if(THETA_TMP_COUNTER==1) begin 
+		pwm = 1'b0;
+	
+	end 
+	
+	else begin 
+		if(counter <= SINE_OUT) // duty cycle value 
+			pwm = 1'b1;
+		else
+			pwm =1'b0;
+	end 
 	
 	
 	
 	
-	if(counter <= SINE_OUT) // duty cycle value 
-		pwm = 1'b1;
-	else
-		pwm =1'b0;
+	
+	
+
 		
 		
 end
