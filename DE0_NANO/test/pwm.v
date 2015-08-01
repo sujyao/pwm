@@ -21,78 +21,55 @@ module  pwm(
 	reg [12:0] SINE_OUT;         //Output Sine in two's compliment
 	
 always @(posedge clk) begin
-
-
-
-    if(r == div ) begin
-       THETA = (THETA + 10'b1) % 10'd89; // theta_a is flopped theat 0 to 255  
-        r = 1;
+	if(r == div ) begin
+		THETA = (THETA + 10'b1) % 10'd89; // theta_a is flopped theat 0 to 255  
+      r = 1;
 		  
-		  	//adding delay here 	 
-			if(THETA == 10'd0) begin
-				THETA_TMP_COUNTER = THETA_TMP_COUNTER + 1;
-			end
-			else begin
-				THETA_TMP_COUNTER = THETA_TMP_COUNTER;
-			end
+		//adding delay here 	 
+		if(THETA == 10'd0) begin
+			THETA_TMP_COUNTER = THETA_TMP_COUNTER + 1;
+		end
+		else begin
+			THETA_TMP_COUNTER = THETA_TMP_COUNTER;
+		end
 
 		  //end of delay. 
-    end
-	 
-    else begin
-         
-		  	if(THETA_TMP_COUNTER == 1) begin
-				
-			   THETA = 10'd0;
-		
-				if(delay == 500000000) begin
-					 delay = 0;
-				end
-				else begin 
-					delay = delay + 1;
-				end 		 
-			end	
-			else begin
-				r = r + 1;	
-			end	  
-    end
-end 
-	// pwm generator 
-always @(posedge clk) begin
+   end
+   else begin
+	// pwm generator  
+		pwm = 1'b1;
+		if(counter == 5000) begin // Top value, set to setup pwm fre.
+			counter = 0;
+			pwm = 1'b1; 
+		end
 	
-	pwm = 1'b1;
-	if(counter == 5000) begin // Top value, set to setup pwm fre.
-		counter = 0;
-		pwm = 1'b1; 
-	end
-	
-	else begin
-		counter = counter + 1;
-		pwm = pwm;
-	end
-	
-	if(THETA_TMP_COUNTER==1) begin 
-		pwm = 1'b0;
-	
-	end 
-	
-	else begin 
+		else begin
+			counter = counter + 1;
+			pwm = pwm;
+		end
 		if(counter <= SINE_OUT) // duty cycle value 
 			pwm = 1'b1;
 		else
 			pwm =1'b0;
-	end 
-	
-	
-	
-	
-	
-	
-
-		
-		
-end
-always @(THETA) begin
+	  
+		if(THETA_TMP_COUNTER == 1) begin
+			THETA = 10'd0;
+			if(delay == 50000000) begin
+				THETA_TMP_COUNTER = 0;
+				delay = 0;
+			end
+			else begin 
+				delay = delay + 1;
+				pwm = 1'b0;
+					
+			end 		 
+		end	
+		else begin
+			r = r + 1;	
+		end	  
+	end
+end 
+always @(THETA) begin      // sine look up table 
 	case (THETA)                    			
 			10'd0	:	SINE_TMP	 =	13'd	0	;
 			10'd1	:	SINE_TMP	 =	13'd	178	;
