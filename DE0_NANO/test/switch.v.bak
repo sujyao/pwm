@@ -1,0 +1,19 @@
+module  switch(
+		input clk,
+		input reg key,
+		input reg key1,
+		output reg led,
+		output reg led1);
+		 
+
+		 
+		 
+
+
+
+always @(posedge clk) begin
+	
+ 
+	
+	
+endmodule

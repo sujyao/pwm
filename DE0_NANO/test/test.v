@@ -5,9 +5,15 @@
 
 module test(
 
-	//////////// GPIO_0, GPIO_0 connect to GPIO Default //////////
-	GPIO,
-	GPIO_IN 
+	//////////// CLOCK //////////
+	CLOCK_50,
+
+	//////////// LED //////////
+	LED,
+
+	//////////// 2x13 GPIO Header //////////
+	GPIO_2,
+	GPIO_2_IN 
 );
 
 //=======================================================
@@ -19,9 +25,15 @@ module test(
 //  PORT declarations
 //=======================================================
 
-//////////// GPIO_0, GPIO_0 connect to GPIO Default //////////
-inout 		    [33:0]		GPIO;
-input 		     [1:0]		GPIO_IN;
+//////////// CLOCK //////////
+input 		          		CLOCK_50;
+
+//////////// LED //////////
+output		     [7:0]		LED;
+
+//////////// 2x13 GPIO Header //////////
+inout 		    [12:0]		GPIO_2;
+input 		     [2:0]		GPIO_2_IN;
 
 
 //=======================================================

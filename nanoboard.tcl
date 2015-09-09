@@ -217,6 +217,20 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_IN[1]
 set_location_assignment PIN_M16 -to GPIO_2_IN[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_IN[2]
 
+set_location_assignment PIN_A14 -to GPIO_2_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_0
+set_location_assignment PIN_B16 -to GPIO_2_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_1
+
+set_location_assignment PIN_C14 -to GPIO_2_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_2
+set_location_assignment PIN_C16 -to GPIO_2_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_3
+set_location_assignment PIN_F14 -to GPIO_2_10
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_10
+set_location_assignment PIN_G15 -to GPIO_2_12
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_12
+
 #============================================================
 # GPIO_0, GPIO_0 connect to GPIO Default
 #============================================================

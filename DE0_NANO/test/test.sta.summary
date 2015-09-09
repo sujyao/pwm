@@ -2,64 +2,40 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
-Slack : 43.946
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : 11.110
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
-Slack : 0.358
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.361
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 48.724
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.593
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
-Slack : 0.885
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 12.076
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.578
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.320
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
-Slack : 44.653
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.593
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.311
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 14.796
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 48.900
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.193
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.789
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.543
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
-Slack : 46.765
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.186
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 49.485
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.494
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.463
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.271
 TNS   : 0.000
 
 ------------------------------------------------------------

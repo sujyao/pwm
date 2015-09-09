@@ -1,1 +1,2 @@
-Warning (10268): Verilog HDL information at pwm.v(23): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at switch.v(5): object "led" differs only in case from object "LED" in the same scope
+Info (10281): Verilog HDL Declaration information at switch.v(6): object "led1" differs only in case from object "LED1" in the same scope
